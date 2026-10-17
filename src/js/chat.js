@@ -268,6 +268,7 @@ export function initChatWidget() {
   function openChat() {
     chatWindow.classList.add('is-open');
     chatWindow.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('sona-chat-open');
     setTimeout(() => {
       scrollChatToBottom();
     }, 150);
@@ -276,6 +277,7 @@ export function initChatWidget() {
   function closeChat() {
     chatWindow.classList.remove('is-open');
     chatWindow.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('sona-chat-open');
   }
 
   function scrollChatToBottom() {

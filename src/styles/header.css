@@ -523,16 +523,30 @@
 
 /* ========================================================
    FLOATING ACTION GROUP (QA Item 5: Whatsapp, Call, Scroll to Top)
-   Must be present on all pages
+   Positioned on the right side directly above the Chat-bot, visible across all pages
 ======================================================== */
 .floating-action-group {
   position: fixed;
-  bottom: 24px;
-  left: 24px;
-  display: flex;
+  bottom: 106px;
+  right: 29px;
+  display: flex !important;
   flex-direction: column;
+  align-items: center;
   gap: 12px;
-  z-index: 990;
+  z-index: 1000;
+  pointer-events: auto;
+  transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), 
+              visibility 0.25s ease;
+}
+
+/* Hide floating actions gracefully when the chat modal/window is open */
+body.sona-chat-open .floating-action-group,
+#sonaFloatingChat:has(.sona-chat-window.is-open) + .floating-action-group {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  transform: translateY(12px) scale(0.9);
 }
 
 .floating-action-btn {
@@ -549,10 +563,11 @@
   cursor: pointer;
   border: 2px solid rgba(255, 255, 255, 0.4);
   position: relative;
+  flex-shrink: 0;
 }
 
 .floating-action-btn:hover {
-  transform: translateY(-4px) scale(1.08);
+  transform: translateY(-3px) scale(1.08);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
 }
 
@@ -564,18 +579,30 @@
   background: linear-gradient(135deg, #084e10, #188628);
 }
 
+/* Scroll-to-top button: sits at the top of the stack and smoothly collapses when hidden */
 .floating-btn-scrolltop {
   background: linear-gradient(135deg, #1b261e, #3a4b3d);
   opacity: 0;
   visibility: hidden;
-  transform: scale(0.85);
-  transition: all 0.3s ease;
+  transform: scale(0.8);
+  height: 0;
+  width: 48px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  pointer-events: none;
+  overflow: hidden;
+  order: -1;
+  transition: opacity 0.25s ease, transform 0.25s ease, height 0.25s ease, margin 0.25s ease;
 }
 
 .floating-btn-scrolltop.is-visible {
   opacity: 1;
   visibility: visible;
   transform: scale(1);
+  height: 48px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  pointer-events: auto;
 }
 
 .floating-action-btn svg {
@@ -584,27 +611,63 @@
   fill: currentColor;
 }
 
+/* Tooltips: positioned on the LEFT side of buttons so they expand towards center screen */
 .floating-action-tooltip {
   position: absolute;
-  left: calc(100% + 10px);
+  right: calc(100% + 10px);
+  left: auto;
+  top: 50%;
+  transform: translateY(-50%);
   background: #042e09;
   color: #ffffff;
-  padding: 5px 11px;
+  padding: 6px 12px;
   border-radius: 8px;
-  font-size: 11.5px;
+  font-size: 12px;
   font-weight: 700;
   white-space: nowrap;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: all 0.2s ease;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
 }
 
 .floating-action-btn:hover .floating-action-tooltip {
   opacity: 1;
   visibility: visible;
-  left: calc(100% + 14px);
+  right: calc(100% + 14px);
+  left: auto;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 640px) {
+  .floating-action-group {
+    bottom: 92px;
+    right: 23px;
+    gap: 10px;
+  }
+
+  .floating-action-btn {
+    width: 44px;
+    height: 44px;
+  }
+
+  .floating-btn-scrolltop {
+    width: 44px;
+  }
+
+  .floating-btn-scrolltop.is-visible {
+    height: 44px;
+  }
+
+  .floating-action-btn svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .floating-action-tooltip {
+    display: none !important;
+  }
 }
 
 /* ========================================================

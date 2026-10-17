@@ -169,17 +169,8 @@ function renderHomeView(mainEl) {
         </div>
       </div>
 
-      <!-- Centered Hero Overlay (QA Item 7: Centered H1, other data visible, no button, no video, slider in background) -->
-      <div class="hero-center-overlay">
-        <span class="hero-center-badge">🌿 100% Homemade Ayurvedic Haircare</span>
-        <h1 class="hero-center-h1">Pure Herbal Haircare From Village Roots</h1>
-        <p class="hero-center-desc">Handcrafted by Sonali Waghmode with cold-pressed natural herbs &amp; Vedic recipes for thicker, healthier hair.</p>
-        <div class="hero-center-tags">
-          <span class="hero-pill-tag">✓ 100% Chemical-Free</span>
-          <span class="hero-pill-tag">✓ Trusted by 2.5L+ Families</span>
-          <span class="hero-pill-tag">✓ Original Ayurvedic Formulas</span>
-        </div>
-      </div>
+      <!-- Hidden H1 for SEO & Accessibility -->
+      <h1 class="sr-only">Ayurveda - Pure Herbal Haircare From Village Roots</h1>
 
       <!-- Slideshow Navigation Dots -->
       <div class="hero-dots-container">
