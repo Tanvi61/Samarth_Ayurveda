@@ -35,29 +35,81 @@ export function initApp() {
 
 function handleRouteFromHash() {
   const hash = window.location.hash.replace(/^#\/?/, '').trim();
-  if (!hash || hash === 'home') {
-    navigateTo('home', null, false);
-  } else if (hash === 'about' || hash === 'about-us' || hash === 'pages/about') {
-    navigateTo('about', null, false);
-  } else if (hash === 'products' || hash === 'collections/all' || hash === 'productsSection') {
-    navigateTo('products', null, false);
-  } else if (hash === 'contact' || hash === 'pages/contact') {
-    navigateTo('contact', null, false);
-  } else if (hash === 'account' || hash === 'login' || hash === 'signin' || hash === 'signup' || hash === 'my-account' || hash === 'pages/account') {
-    navigateTo('account', null, false);
-  } else if (hash === 'orders' || hash === 'pages/orders' || hash === 'my-orders' || hash === 'track-order') {
-    navigateTo('orders', null, false);
-  } else if (hash.startsWith('product/')) {
-    const id = Number(hash.split('/')[1]);
-    if (id) {
-      navigateTo('pdp', id, false);
-    } else {
+  const path = window.location.pathname.toLowerCase();
+  const pageAttr = document.body ? document.body.dataset.page : null;
+
+  // 1. Explicit hash takes priority if present
+  if (hash) {
+    if (hash === 'home') {
       navigateTo('home', null, false);
+      return;
+    } else if (hash === 'about' || hash === 'about-us' || hash === 'pages/about') {
+      navigateTo('about', null, false);
+      return;
+    } else if (hash === 'products' || hash === 'collections/all' || hash === 'productsSection' || hash === 'product') {
+      navigateTo('products', null, false);
+      return;
+    } else if (hash === 'contact' || hash === 'pages/contact' || hash === 'contact-us') {
+      navigateTo('contact', null, false);
+      return;
+    } else if (hash === 'account' || hash === 'login' || hash === 'signin' || hash === 'signup' || hash === 'my-account' || hash === 'pages/account') {
+      navigateTo('account', null, false);
+      return;
+    } else if (hash === 'orders' || hash === 'pages/orders' || hash === 'my-orders' || hash === 'track-order') {
+      navigateTo('orders', null, false);
+      return;
+    } else if (hash.startsWith('product/')) {
+      const id = Number(hash.split('/')[1]);
+      if (id) {
+        navigateTo('pdp', id, false);
+        return;
+      }
+    } else if (hash.startsWith('product-')) {
+      const id = Number(hash.split('-')[1]);
+      if (id) {
+        navigateTo('pdp', id, false);
+        return;
+      }
+    } else {
+      // QA Item 17: Verify after wrong url - page go to the home page
+      navigateTo('home', null, true);
+      return;
     }
-  } else {
-    // QA Item 17: Verify after wrong url - page go to the home page
-    navigateTo('home', null, true);
   }
+
+  // 2. Check document body data-page attribute (set on standalone pages)
+  if (pageAttr) {
+    if (pageAttr === 'about') { navigateTo('about', null, false); return; }
+    if (pageAttr === 'products') { navigateTo('products', null, false); return; }
+    if (pageAttr === 'contact') { navigateTo('contact', null, false); return; }
+    if (pageAttr === 'orders') { navigateTo('orders', null, false); return; }
+    if (pageAttr === 'account') { navigateTo('account', null, false); return; }
+  }
+
+  // 3. Pathname detection for standalone URLs
+  if (path.includes('about.html') || path.endsWith('/about')) {
+    navigateTo('about', null, false);
+    return;
+  }
+  if (path.includes('products.html') || path.includes('product.html') || path.endsWith('/products') || path.endsWith('/product')) {
+    navigateTo('products', null, false);
+    return;
+  }
+  if (path.includes('contact.html') || path.endsWith('/contact')) {
+    navigateTo('contact', null, false);
+    return;
+  }
+  if (path.includes('orders.html') || path.endsWith('/orders')) {
+    navigateTo('orders', null, false);
+    return;
+  }
+  if (path.includes('account.html') || path.endsWith('/account')) {
+    navigateTo('account', null, false);
+    return;
+  }
+
+  // Default to home
+  navigateTo('home', null, false);
 }
 
 export function navigateTo(route, productId = null, updateHash = true) {
@@ -65,20 +117,24 @@ export function navigateTo(route, productId = null, updateHash = true) {
   if (productId) currentProductId = productId;
 
   if (updateHash) {
-    if (route === 'home') {
-      window.location.hash = 'home';
-    } else if (route === 'about') {
-      window.location.hash = 'about';
-    } else if (route === 'products') {
-      window.location.hash = 'products';
-    } else if (route === 'contact') {
-      window.location.hash = 'contact';
-    } else if (route === 'account') {
-      window.location.hash = 'account';
-    } else if (route === 'orders') {
-      window.location.hash = 'orders';
-    } else if (route === 'pdp' && productId) {
-      window.location.hash = `product/${productId}`;
+    const path = window.location.pathname.toLowerCase();
+    const isStandalonePage = path.includes('about.html') || path.includes('products.html') || path.includes('contact.html') || path.includes('orders.html');
+    if (!isStandalonePage) {
+      if (route === 'home') {
+        window.location.hash = 'home';
+      } else if (route === 'about') {
+        window.location.hash = 'about';
+      } else if (route === 'products') {
+        window.location.hash = 'products';
+      } else if (route === 'contact') {
+        window.location.hash = 'contact';
+      } else if (route === 'account') {
+        window.location.hash = 'account';
+      } else if (route === 'orders') {
+        window.location.hash = 'orders';
+      } else if (route === 'pdp' && (productId || currentProductId)) {
+        window.location.hash = `product/${productId || currentProductId}`;
+      }
     }
   }
 
@@ -2000,9 +2056,20 @@ function setupGlobalEvents() {
   document.addEventListener('click', (e) => {
     const link = e.target.closest('[data-route]');
     if (link) {
+      const href = link.getAttribute('href') || '';
+      // If the link points to a real HTML page, permit normal browser navigation to the page
+      if (href.endsWith('.html') || (href.includes('.html#') && !href.startsWith('#'))) {
+        return;
+      }
       e.preventDefault();
       const route = link.dataset.route;
-      navigateTo(route, null, true);
+      let productId = null;
+      if (route === 'pdp') {
+        const idFromData = link.dataset.id;
+        const idFromHref = href.match(/product[/-](\d+)/);
+        productId = idFromData ? Number(idFromData) : (idFromHref ? Number(idFromHref[1]) : 1);
+      }
+      navigateTo(route, productId, true);
     }
   });
 
@@ -2381,4 +2448,14 @@ function initFloatingActionButtons() {
     });
   }
 }
+
+// Auto-initialize application
+if (typeof window !== 'undefined') {
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => initApp());
+  } else {
+    initApp();
+  }
+}
+
 

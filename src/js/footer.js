@@ -87,12 +87,12 @@ export function renderFooter(containerEl) {
           <div class="footer-col footer-col-links">
             <h3 class="footer-col-title">Quick Links</h3>
             <ul class="footer-links-list">
-              <li><a class="footer-link" href="#home" data-route="home">Home</a></li>
-              <li><a class="footer-link" href="#about" data-route="about">About Us</a></li>
-              <li><a class="footer-link" href="#products" data-route="products">Products</a></li>
-              <li><a class="footer-link" href="#contact" data-route="contact">Contact Us</a></li>
-              <li><a class="footer-link track-order-trigger" href="#orders" data-route="orders">Track Orders</a></li>
-              <li><a class="footer-link" href="#account" data-route="account">My Account</a></li>
+              <li><a class="footer-link" href="index.html" data-route="home">Home</a></li>
+              <li><a class="footer-link" href="about.html" data-route="about">About Us</a></li>
+              <li><a class="footer-link" href="products.html" data-route="products">Products</a></li>
+              <li><a class="footer-link" href="contact.html" data-route="contact">Contact Us</a></li>
+              <li><a class="footer-link track-order-trigger" href="orders.html" data-route="orders">Track Orders</a></li>
+              <li><a class="footer-link" href="index.html#account" data-route="account">My Account</a></li>
             </ul>
           </div>
 
@@ -100,12 +100,12 @@ export function renderFooter(containerEl) {
           <div class="footer-col footer-col-products">
             <h3 class="footer-col-title">Our Products</h3>
             <ul class="footer-links-list">
-              <li><a class="footer-link" href="#products" data-route="products">Home Made Hair Oil</a></li>
-              <li><a class="footer-link" href="#products" data-route="products">Herbal Shampoo</a></li>
-              <li><a class="footer-link" href="#products" data-route="products">Homemade Mehndi Powder</a></li>
-              <li><a class="footer-link" href="#products" data-route="products">Nourishment Conditioner</a></li>
-              <li><a class="footer-link" href="#products" data-route="products">Rosemary Hair Growth Spray</a></li>
-              <li><a class="footer-link" href="#products" data-route="products">Big Combo Pro Max</a></li>
+              <li><a class="footer-link" href="products.html" data-route="products">Home Made Hair Oil</a></li>
+              <li><a class="footer-link" href="products.html" data-route="products">Herbal Shampoo</a></li>
+              <li><a class="footer-link" href="products.html" data-route="products">Homemade Mehndi Powder</a></li>
+              <li><a class="footer-link" href="products.html" data-route="products">Nourishment Conditioner</a></li>
+              <li><a class="footer-link" href="products.html" data-route="products">Rosemary Hair Growth Spray</a></li>
+              <li><a class="footer-link" href="products.html" data-route="products">Big Combo Pro Max</a></li>
             </ul>
           </div>
 

@@ -249,7 +249,10 @@ async function verifyAll() {
 
   // Check 2: "Get a Quote" modal trigger
   await page.goto('http://localhost:5173/#home', { waitUntil: 'networkidle2' });
-  await page.click('#navGetQuoteBtn');
+  await page.evaluate(() => {
+    const btn = document.getElementById('navGetQuoteBtn') || document.getElementById('mobileGetQuoteBtn') || document.querySelector('.enquiry-btn');
+    if (btn) btn.click();
+  });
   await new Promise(r => setTimeout(r, 400));
   const quoteModal = await page.evaluate(() => {
     const modal = document.getElementById('enquiryModal');

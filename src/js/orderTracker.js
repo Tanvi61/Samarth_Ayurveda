@@ -47,6 +47,10 @@ export function initOrderTracker() {
   document.addEventListener('click', (e) => {
     const trigger = e.target.closest('.track-order-trigger');
     if (trigger) {
+      const href = trigger.getAttribute('href') || '';
+      if (href.endsWith('orders.html')) {
+        return; // Allow standard page navigation to orders.html
+      }
       e.preventDefault();
       e.stopPropagation();
       // Close mobile drawer if open
