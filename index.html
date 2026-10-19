@@ -90,641 +90,1136 @@
   <link rel="stylesheet" href="./src/styles/search.css" />
   <link rel="stylesheet" href="./src/styles/chat.css" />
 </head>
-<body>
+<body data-page="home">
 
   <div class="page-wrapper">
-    <!-- ========================================================
-         0. TOP SUBHEADER (QA Item 1, 19, 20, 21, 28)
-    ======================================================== -->
-    <div class="site-subheader" id="siteSubheader">
-      <div class="subheader-container">
-        <div class="subheader-marquee-track">
-          <!-- Primary Group -->
-          <div class="subheader-marquee-group">
-            <div class="subheader-left">
-              <a href="tel:+919325260725" class="subheader-contact-link" title="Call Us">
-                <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                <span>+91 93252 60725</span>
-              </a>
-              <a href="mailto:info@samarthayurveda.com" class="subheader-contact-link" title="Email Us">
-                <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                <span>info@samarthayurveda.com</span>
-              </a>
-            </div>
-            <div class="subheader-right">
-              <a href="https://www.facebook.com/sonaherbal" target="_blank" rel="noopener noreferrer" class="subheader-social-link" aria-label="Facebook">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-              </a>
-              <a href="https://www.instagram.com/sonaliwaghmode8669/" target="_blank" rel="noopener noreferrer" class="subheader-social-link" aria-label="Instagram">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-              </a>
-              <a href="https://wa.me/919325260725?text=Hello%20Ayurveda" target="_blank" rel="noopener noreferrer" class="subheader-social-link" aria-label="WhatsApp">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
-              </a>
-            </div>
-          </div>
+    <!-- Unified Dynamic Layout Header Root (Single Source of Truth in src/js/layout.js) -->
+    <div id="siteHeaderRoot"></div>
 
-          <!-- Seamless Duplicate for continuous rotation on mobile -->
-          <div class="subheader-marquee-group subheader-marquee-duplicate" aria-hidden="true">
-            <div class="subheader-left">
-              <a href="tel:+919325260725" class="subheader-contact-link" title="Call Us" tabindex="-1">
-                <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                <span>+91 93252 60725</span>
-              </a>
-              <a href="mailto:info@samarthayurveda.com" class="subheader-contact-link" title="Email Us" tabindex="-1">
-                <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                <span>info@samarthayurveda.com</span>
-              </a>
-            </div>
-            <div class="subheader-right">
-              <a href="https://www.facebook.com/sonaherbal" target="_blank" rel="noopener noreferrer" class="subheader-social-link" aria-label="Facebook" tabindex="-1">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-              </a>
-              <a href="https://www.instagram.com/sonaliwaghmode8669/" target="_blank" rel="noopener noreferrer" class="subheader-social-link" aria-label="Instagram" tabindex="-1">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-              </a>
-              <a href="https://wa.me/919325260725?text=Hello%20Ayurveda" target="_blank" rel="noopener noreferrer" class="subheader-social-link" aria-label="WhatsApp" tabindex="-1">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
-              </a>
-            </div>
-          </div>
+    <!-- MAIN CONTENT AREA -->
+    <main id="mainContent" class="main-content">
+<!-- 1. INSTAGRAM REEL STORIES -->
+    <section class="reels-section">
+      <div class="reels-container">
+        <div class="reels-row">
+          
+            <button class="reel-item" data-index="0" type="button">
+              <span class="reel-ring">
+                <img class="reel-thumb" src="https://sonaherbal.com/cdn/shop/files/Screenshot_2026-07-07_010758.png?v=1783366724&amp;width=180" alt="Customer Hair Growth Result &amp; Routine" loading="lazy">
+              </span>
+              <span class="reel-title">Customer Hair Growth Result &amp; Routine</span>
+            </button>
+          
+            <button class="reel-item" data-index="1" type="button">
+              <span class="reel-ring">
+                <img class="reel-thumb" src="https://sonaherbal.com/cdn/shop/files/Screenshot_2026-07-07_010814.png?v=1783366724&amp;width=180" alt="Making of Traditional Homemade Ayurveda Oil" loading="lazy">
+              </span>
+              <span class="reel-title">Making of Traditional Homemade Ayurveda Oil</span>
+            </button>
+          
+            <button class="reel-item" data-index="2" type="button">
+              <span class="reel-ring">
+                <img class="reel-thumb" src="https://sonaherbal.com/cdn/shop/files/Screenshot_2026-07-07_010739.png?v=1783366724&amp;width=180" alt="Founder Sonali Waghmode Award Speech &amp; Message" loading="lazy">
+              </span>
+              <span class="reel-title">Founder Sonali Waghmode Award Speech &amp; Message</span>
+            </button>
+          
+            <button class="reel-item" data-index="3" type="button">
+              <span class="reel-ring">
+                <img class="reel-thumb" src="https://sonaherbal.com/cdn/shop/files/Screenshot_2026-07-08_220244.png?v=1783528430&amp;width=180" alt="Rosemary Spray Application &amp; Scalp Care" loading="lazy">
+              </span>
+              <span class="reel-title">Rosemary Spray Application &amp; Scalp Care</span>
+            </button>
+          
+            <button class="reel-item" data-index="4" type="button">
+              <span class="reel-ring">
+                <img class="reel-thumb" src="https://sonaherbal.com/cdn/shop/files/Screenshot_2026-07-08_220922.png?v=1783528813&amp;width=180" alt="Real Customer Review &amp; Unboxing Experience" loading="lazy">
+              </span>
+              <span class="reel-title">Real Customer Review &amp; Unboxing Experience</span>
+            </button>
+          
         </div>
+      </div>
+    </section>
+
+    <!-- 2. HERO SLIDESHOW -->
+    <section class="hero-slideshow-section" id="heroSlideshow">
+      <div class="hero-slides-wrapper">
+        <!-- Slide 1 -->
+        <div class="hero-slide active">
+          <picture>
+            <source media="(max-width: 749px)" srcset="https://cdn.shopify.com/s/files/1/0601/8242/9745/files/Untitled_design_13.svg?v=1788326707">
+            <img src="https://cdn.shopify.com/s/files/1/0601/8242/9745/files/Untitled_design_62.png?v=1788326706" alt="Ayurveda Founder Award" loading="eager">
+          </picture>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="hero-slide">
+          <picture>
+            <source media="(max-width: 749px)" srcset="https://cdn.shopify.com/s/files/1/0601/8242/9745/files/Sona_Herbal_Founder_Award_Template_-_Portrait_2.svg?v=1788326706">
+            <img src="https://cdn.shopify.com/s/files/1/0601/8242/9745/files/Sona_Herbal_Founder_Award_Template_-_Landscape_1400_x_788_px.png?v=1788326706" alt="Ayurveda Founder Award" loading="lazy">
+          </picture>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="hero-slide">
+          <picture>
+            <source media="(max-width: 749px)" srcset="https://cdn.shopify.com/s/files/1/0601/8242/9745/files/ChatGPT_Image_Jul_9_2026_12_51_42_AM.png?v=1783538738">
+            <img src="https://cdn.shopify.com/s/files/1/0601/8242/9745/files/ChatGPT_Image_Jul_9_2026_12_01_08_AM.png?v=1783535534" alt="Ayurveda Range" loading="lazy">
+          </picture>
+        </div>
+      </div>
+
+      <!-- Hidden H1 for SEO & Accessibility -->
+      <h1 class="sr-only">Ayurveda - Pure Herbal Haircare From Village Roots</h1>
+
+      <!-- Slideshow Navigation Dots -->
+      <div class="hero-dots-container">
+        <span role="button" tabindex="0" class="hero-dot active" data-slide="0" aria-label="Slide 1"></span>
+        <span role="button" tabindex="0" class="hero-dot" data-slide="1" aria-label="Slide 2"></span>
+        <span role="button" tabindex="0" class="hero-dot" data-slide="2" aria-label="Slide 3"></span>
+      </div>
+    </section>
+
+    <!-- 3. FEATURED COLLECTION / CURATED FOR YOU (Exact Reference Match) -->
+    <section class="fc-clean" id="curatedSection">
+      <div class="fc-shell">
+        <div class="fc-header">
+          <h2 class="fc-heading">Curated For You</h2>
+          <a class="fc-viewall" href="#productsSection" id="homeViewAllBtn">View All</a>
+        </div>
+
+        <div class="fc-slider" id="homeProductsSlider">
+          
+            <div class="fc-card" data-id="1">
+              <a href="#product/1" class="fc-img-wrap" data-id="1">
+                <span class="fc-badge">Best Seller</span>
+                <img src="https://sonaherbal.com/cdn/shop/files/WhatsAppImage2026-06-28at14.56.05.jpg?v=1783276704&amp;width=1400" alt="Combo Pro Max | Hair Oil + Shampoo + Conditioner + Rosemary Spray" class="fc-img" loading="lazy">
+              </a>
+
+              <div class="fc-info">
+                <a href="#product/1" class="fc-title-product" data-id="1">
+                  Combo Pro Max | Hair Oil + Shampoo + Conditioner + Rosemary Spray
+                </a>
+
+                <div class="fc-price-row">
+                  <span class="fc-price">Rs. 1,217.00</span>
+                  <span class="fc-compare">Rs. 1,348.00</span>
+                </div>
+              </div>
+            </div>
+          
+            <div class="fc-card" data-id="2">
+              <a href="#product/2" class="fc-img-wrap" data-id="2">
+                <span class="fc-badge">Popular Combo</span>
+                <img src="https://sonaherbal.com/cdn/shop/files/ChatGPT_Image_Jun_17_2026_05_22_42_PM.png?v=1783276698&amp;width=1400" alt="Oil &amp; Shampoo | Best Herbal Hair Oil &amp; Shampoo Combo for Hair Growth &amp; Hair Fall Control – Ayurveda’s Herbal Hair Oil" class="fc-img" loading="lazy">
+              </a>
+
+              <div class="fc-info">
+                <a href="#product/2" class="fc-title-product" data-id="2">
+                  Oil &amp; Shampoo | Best Herbal Hair Oil &amp; Shampoo Combo for Hair Growth &amp; Hair Fall Control – Ayurveda’s Herbal Hair Oil
+                </a>
+
+                <div class="fc-price-row">
+                  <span class="fc-price">Rs. 698.00</span>
+                  <span class="fc-compare">Rs. 799.00</span>
+                </div>
+              </div>
+            </div>
+          
+            <div class="fc-card" data-id="3">
+              <a href="#product/3" class="fc-img-wrap" data-id="3">
+                <span class="fc-badge">Save 18%</span>
+                <img src="https://sonaherbal.com/cdn/shop/files/WhatsAppImage2026-07-10at18.25.13.jpg?v=1783951293&amp;width=1400" alt="Combo Max | Oil + Shampoo + Conditioner | Complete Hair Combo" class="fc-img" loading="lazy">
+              </a>
+
+              <div class="fc-info">
+                <a href="#product/3" class="fc-title-product" data-id="3">
+                  Combo Max | Oil + Shampoo + Conditioner | Complete Hair Combo
+                </a>
+
+                <div class="fc-price-row">
+                  <span class="fc-price">Rs. 1,018.00</span>
+                  <span class="fc-compare">Rs. 1,249.00</span>
+                </div>
+              </div>
+            </div>
+          
+            <div class="fc-card" data-id="4">
+              <a href="#product/4" class="fc-img-wrap" data-id="4">
+                <span class="fc-badge">Flagship Product</span>
+                <img src="https://sonaherbal.com/cdn/shop/files/WhatsApp_Image_2026-06-15_at_22.45.30_5edb0341-2f76-4434-b25e-8fd3ee51c569.jpg?v=1783276698&amp;width=1400" alt="Oil | Best Herbal Hair Oil for Hair Growth &amp; Hair Fall Control – Ayurveda’s Home Made Hair Oil" class="fc-img" loading="lazy">
+              </a>
+
+              <div class="fc-info">
+                <a href="#product/4" class="fc-title-product" data-id="4">
+                  Oil | Best Herbal Hair Oil for Hair Growth &amp; Hair Fall Control – Ayurveda’s Home Made Hair Oil
+                </a>
+
+                <div class="fc-price-row">
+                  <span class="fc-price">Rs. 399.00</span>
+                  <span class="fc-compare">Rs. 449.00</span>
+                </div>
+              </div>
+            </div>
+          
+            <div class="fc-card" data-id="5">
+              <a href="#product/5" class="fc-img-wrap" data-id="5">
+                <span class="fc-badge">Save 15%</span>
+                <img src="https://sonaherbal.com/cdn/shop/files/ChatGPT_Image_Jun_18_2026_06_58_59_PM.png?v=1783276699&amp;width=1400" alt="Big Combo | Best Herbal Hair Oil, Shampoo &amp; Mehndi Combo for Hair Growth, Hair Fall Control &amp; Grey Hair" class="fc-img" loading="lazy">
+              </a>
+
+              <div class="fc-info">
+                <a href="#product/5" class="fc-title-product" data-id="5">
+                  Big Combo | Best Herbal Hair Oil, Shampoo &amp; Mehndi Combo for Hair Growth, Hair Fall Control &amp; Grey Hair
+                </a>
+
+                <div class="fc-price-row">
+                  <span class="fc-price">Rs. 847.00</span>
+                  <span class="fc-compare">Rs. 999.00</span>
+                </div>
+              </div>
+            </div>
+          
+            <div class="fc-card" data-id="6">
+              <a href="#product/6" class="fc-img-wrap" data-id="6">
+                <span class="fc-badge">Trending</span>
+                <img src="https://sonaherbal.com/cdn/shop/files/Untitled_design_47.png?v=1783276700&amp;width=1400" alt="Combo Pro | Best Herbal Hair Oil, Shampoo &amp; Rosemary Hair Spray Combo for Hair Growth &amp; Hair Fall Control" class="fc-img" loading="lazy">
+              </a>
+
+              <div class="fc-info">
+                <a href="#product/6" class="fc-title-product" data-id="6">
+                  Combo Pro | Best Herbal Hair Oil, Shampoo &amp; Rosemary Hair Spray Combo for Hair Growth &amp; Hair Fall Control
+                </a>
+
+                <div class="fc-price-row">
+                  <span class="fc-price">Rs. 897.00</span>
+                  
+                </div>
+              </div>
+            </div>
+          
+            <div class="fc-card" data-id="7">
+              <a href="#product/7" class="fc-img-wrap" data-id="7">
+                <span class="fc-badge">Save 36%</span>
+                <img src="https://sonaherbal.com/cdn/shop/files/ChatGPT_Image_Jun_18_2026_06_52_50_PM.png?v=1783276702&amp;width=1400" alt="Big Combo Pro | Herbal Hair Oil, Shampoo, Mehndi &amp; Hair Spray Combo for Hair Growth, Hair Fall Control &amp; Grey Hair" class="fc-img" loading="lazy">
+              </a>
+
+              <div class="fc-info">
+                <a href="#product/7" class="fc-title-product" data-id="7">
+                  Big Combo Pro | Herbal Hair Oil, Shampoo, Mehndi &amp; Hair Spray Combo for Hair Growth, Hair Fall Control &amp; Grey Hair
+                </a>
+
+                <div class="fc-price-row">
+                  <span class="fc-price">Rs. 1,023.00</span>
+                  <span class="fc-compare">Rs. 1,599.00</span>
+                </div>
+              </div>
+            </div>
+          
+            <div class="fc-card" data-id="8">
+              <a href="#product/8" class="fc-img-wrap" data-id="8">
+                <span class="fc-badge">Premium Full Kit</span>
+                <img src="https://sonaherbal.com/cdn/shop/files/WhatsAppImage2026-06-26at11.40.44_1.jpg?v=1783951996&amp;width=1400" alt="Big Combo Pro Max | Oil + Shampoo + Conditioner + Rosemary Spray + Mehndi Powder | A Premium Full Package" class="fc-img" loading="lazy">
+              </a>
+
+              <div class="fc-info">
+                <a href="#product/8" class="fc-title-product" data-id="8">
+                  Big Combo Pro Max | Oil + Shampoo + Conditioner + Rosemary Spray + Mehndi Powder | A Premium Full Package
+                </a>
+
+                <div class="fc-price-row">
+                  <span class="fc-price">Rs. 1,399.00</span>
+                  <span class="fc-compare">Rs. 1,786.00</span>
+                </div>
+              </div>
+            </div>
+          
+            <div class="fc-card" data-id="9">
+              <a href="#product/9" class="fc-img-wrap" data-id="9">
+                <span class="fc-badge">Save 12%</span>
+                <img src="https://sonaherbal.com/cdn/shop/files/ChatGPTImageJun24_2026_11_54_16AM.png?v=1783276707&amp;width=1400" alt="Conditioner – Ayurveda Nourishment Conditioner" class="fc-img" loading="lazy">
+              </a>
+
+              <div class="fc-info">
+                <a href="#product/9" class="fc-title-product" data-id="9">
+                  Conditioner – Ayurveda Nourishment Conditioner
+                </a>
+
+                <div class="fc-price-row">
+                  <span class="fc-price">Rs. 350.00</span>
+                  <span class="fc-compare">Rs. 399.00</span>
+                </div>
+              </div>
+            </div>
+          
+            <div class="fc-card" data-id="10">
+              <a href="#product/10" class="fc-img-wrap" data-id="10">
+                <span class="fc-badge">50% OFF</span>
+                <img src="https://sonaherbal.com/cdn/shop/files/WhatsAppImage2026-05-21at12.29.47.jpg?v=1783276705&amp;width=1400" alt="Rosemary Spray | Rosemary + Rice + Fenugreek Hair Growth Spray | Strengthening &amp; Nourishing Hair Mist | Sulphate, Paraben &amp; Silicon Free | 100ml" class="fc-img" loading="lazy">
+              </a>
+
+              <div class="fc-info">
+                <a href="#product/10" class="fc-title-product" data-id="10">
+                  Rosemary Spray | Rosemary + Rice + Fenugreek Hair Growth Spray | Strengthening &amp; Nourishing Hair Mist | Sulphate, Paraben &amp; Silicon Free | 100ml
+                </a>
+
+                <div class="fc-price-row">
+                  <span class="fc-price">Rs. 249.00</span>
+                  <span class="fc-compare">Rs. 499.00</span>
+                </div>
+              </div>
+            </div>
+          
+            <div class="fc-card" data-id="11">
+              <a href="#product/11" class="fc-img-wrap" data-id="11">
+                <span class="fc-badge">Herbal Care</span>
+                <img src="https://sonaherbal.com/cdn/shop/files/5588.png?v=1783276703&amp;width=1400" alt="Shampoo | Best Herbal Shampoo for Hair Fall Control &amp; Hair Growth – Ayurveda’s Herbal Shampoo" class="fc-img" loading="lazy">
+              </a>
+
+              <div class="fc-info">
+                <a href="#product/11" class="fc-title-product" data-id="11">
+                  Shampoo | Best Herbal Shampoo for Hair Fall Control &amp; Hair Growth – Ayurveda’s Herbal Shampoo
+                </a>
+
+                <div class="fc-price-row">
+                  <span class="fc-price">Rs. 299.00</span>
+                  
+                </div>
+              </div>
+            </div>
+          
+            <div class="fc-card" data-id="12">
+              <a href="#product/12" class="fc-img-wrap" data-id="12">
+                <span class="fc-badge">Save 30%</span>
+                <img src="https://sonaherbal.com/cdn/shop/files/ChatGPT_Image_Apr_13_2026_12_36_50_PM.png?v=1783276704&amp;width=1400" alt="Mehndi Powder | Homemade Herbal Mehndi Powder | Pack Of 2" class="fc-img" loading="lazy">
+              </a>
+
+              <div class="fc-info">
+                <a href="#product/12" class="fc-title-product" data-id="12">
+                  Mehndi Powder | Homemade Herbal Mehndi Powder | Pack Of 2
+                </a>
+
+                <div class="fc-price-row">
+                  <span class="fc-price">Rs. 349.00</span>
+                  <span class="fc-compare">Rs. 499.00</span>
+                </div>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- 3.5 BRAND TRUST TICKER RIBBON (Floating Green Line) -->
+    <div class="sona-brand-ticker-ribbon" aria-label="Brand Trust Highlights">
+      <div class="sona-brand-ticker-track">
+        
+          <div class="sona-brand-ticker-item">
+            <span class="ticker-text-normal">Trusted by 2.5L Customers</span>
+            <span class="ticker-dot"></span>
+            <span class="ticker-text-bold">100% Natural</span>
+            <span class="ticker-dot"></span>
+            <span class="ticker-text-normal">Original</span>
+            <span class="ticker-dot"></span>
+            <span class="ticker-text-bold">Official Ayurveda</span>
+            <span class="ticker-dot"></span>
+            <span class="ticker-text-normal">Authentic</span>
+            <span class="ticker-dot"></span>
+            <span class="ticker-text-bold">No Chemical Used</span>
+            <span class="ticker-dot"></span>
+          </div>
+        
+          <div class="sona-brand-ticker-item">
+            <span class="ticker-text-normal">Trusted by 2.5L Customers</span>
+            <span class="ticker-dot"></span>
+            <span class="ticker-text-bold">100% Natural</span>
+            <span class="ticker-dot"></span>
+            <span class="ticker-text-normal">Original</span>
+            <span class="ticker-dot"></span>
+            <span class="ticker-text-bold">Official Ayurveda</span>
+            <span class="ticker-dot"></span>
+            <span class="ticker-text-normal">Authentic</span>
+            <span class="ticker-dot"></span>
+            <span class="ticker-text-bold">No Chemical Used</span>
+            <span class="ticker-dot"></span>
+          </div>
+        
+          <div class="sona-brand-ticker-item">
+            <span class="ticker-text-normal">Trusted by 2.5L Customers</span>
+            <span class="ticker-dot"></span>
+            <span class="ticker-text-bold">100% Natural</span>
+            <span class="ticker-dot"></span>
+            <span class="ticker-text-normal">Original</span>
+            <span class="ticker-dot"></span>
+            <span class="ticker-text-bold">Official Ayurveda</span>
+            <span class="ticker-dot"></span>
+            <span class="ticker-text-normal">Authentic</span>
+            <span class="ticker-dot"></span>
+            <span class="ticker-text-bold">No Chemical Used</span>
+            <span class="ticker-dot"></span>
+          </div>
+        
+          <div class="sona-brand-ticker-item">
+            <span class="ticker-text-normal">Trusted by 2.5L Customers</span>
+            <span class="ticker-dot"></span>
+            <span class="ticker-text-bold">100% Natural</span>
+            <span class="ticker-dot"></span>
+            <span class="ticker-text-normal">Original</span>
+            <span class="ticker-dot"></span>
+            <span class="ticker-text-bold">Official Ayurveda</span>
+            <span class="ticker-dot"></span>
+            <span class="ticker-text-normal">Authentic</span>
+            <span class="ticker-dot"></span>
+            <span class="ticker-text-bold">No Chemical Used</span>
+            <span class="ticker-dot"></span>
+          </div>
+        
       </div>
     </div>
 
-    <!-- ========================================================
-         1. ROTATING MARQUEE ANNOUNCEMENT BAR
-    ======================================================== -->
-    <div class="sona-alert-marquee" aria-label="Important Announcement">
-      <div class="sona-alert-track">
-        <div class="sona-alert-text">
-          <span class="sona-alert-badge">Alert</span>
-          Beware of fraud/fake products. Original Ayurveda products are sold only on our official website. We do not sell on Flipkart, Amazon or any other marketplace. Please do not trust fake Ayurveda products listed on Flipkart.
+    <!-- 4. LUXURY 3D UNIVERSAL EXPERIENCE (Exact Reference Match) -->
+    <section class="sona-luxury-3d-section" id="luxuryExperience">
+      <div class="sona-luxury-bg"></div>
+      <div class="sona-noise"></div>
+      <div class="sona-orb sona-orb-1"></div>
+      <div class="sona-orb sona-orb-2"></div>
+      <div class="sona-orb sona-orb-3"></div>
 
-          <span class="sona-alert-badge">सावधान</span>
-          नकली/फर्जी प्रोडक्ट्स से सावधान रहें। ओरिजिनल Ayurveda प्रोडक्ट्स केवल हमारी आधिकारिक वेबसाइट पर ही बेचे जाते हैं। हम Flipkart, Amazon या किसी अन्य मार्केटप्लेस पर बिक्री नहीं करते। Flipkart पर बिक रहे नकली Ayurveda प्रोडक्ट्स पर भरोसा न करें।
+      <div class="sona-luxury-container">
+        <!-- Left Column: Heading, Description, Points with Star Signs, Buttons, Mini-Stats -->
+        <div class="sona-copy" data-depth="0.08">
+          <div class="sona-eyebrow">
+            <span class="sona-eyebrow-dot"></span>
+            Natural Herbal Haircare
+          </div>
 
-          <span class="sona-alert-badge">सूचना</span>
-          बनावट/फेक प्रोडक्ट्सपासून सावध रहा. ओरिजिनल Ayurveda प्रोडक्ट्स फक्त आमच्या अधिकृत वेबसाइटवरच विकले जातात. आम्ही Flipkart, Amazon किंवा इतर कोणत्याही मार्केटप्लेसवर विक्री करत नाही. Flipkart वर विकल्या जाणाऱ्या बनावट Ayurveda प्रोडक्ट्सवर विश्वास ठेवू नका.
-        </div>
+          <h2 class="sona-heading">
+            Pure herbal care for
+            <span>stronger, smoother &amp; healthier hair</span>
+          </h2>
 
-        <div class="sona-alert-text">
-          <span class="sona-alert-badge">Alert</span>
-          Beware of fraud/fake products. Original Ayurveda products are sold only on our official website. We do not sell on Flipkart, Amazon or any other marketplace. Please do not trust fake Ayurveda products listed on Flipkart.
+          <p class="sona-description">
+            At Ayurveda, we bring together trusted herbal ingredients and thoughtful formulations to create haircare that feels natural, gentle, and effective. From herbal shampoo to nourishing hair oil and traditional mehandi care, every product is made to support healthy-looking hair with the goodness of nature.
+          </p>
 
-          <span class="sona-alert-badge">सावधान</span>
-          नकली/फर्जी प्रोडक्ट्स से सावधान रहें। ओरिजिनल Ayurveda प्रोडक्ट्स केवल हमारी आधिकारिक वेबसाइट पर ही बेचे जाते हैं। हम Flipkart, Amazon या किसी अन्य मार्केटप्लेस पर बिक्री नहीं करते। Flipkart पर बिक रहे नकली Ayurveda प्रोडक्ट्स पर भरोसा न करें।
+          <!-- Points Cards with 4-Point Sparkle Star Signs -->
+          <div class="sona-points">
+            <div class="sona-point">
+              <div class="sona-point-icon">✦</div>
+              <div class="sona-point-text">
+                <strong>Herbal shampoo for everyday care</strong>
+                <span>Helps cleanse the scalp gently while leaving hair feeling fresh, smooth, and manageable.</span>
+              </div>
+            </div>
 
-          <span class="sona-alert-badge">सूचना</span>
-          बनावट/फेक प्रोडक्ट्सपासून सावध रहा. ओरिजिनल Ayurveda प्रोडक्ट्स फक्त आमच्या अधिकृत वेबसाइटवरच विकले जातात. आम्ही Flipkart, Amazon किंवा इतर कोणत्याही मार्केटप्लेसवर विक्री करत नाही. Flipkart वर विकल्या जाणाऱ्या बनावट Ayurveda प्रोडक्ट्सवर विश्वास ठेवू नका.
-        </div>
-      </div>
-    </div>
+            <div class="sona-point">
+              <div class="sona-point-icon">✦</div>
+              <div class="sona-point-text">
+                <strong>Nourishing herbal hair oil</strong>
+                <span>Crafted to support your regular haircare routine with a rich blend inspired by traditional care.</span>
+              </div>
+            </div>
 
-    <!-- ========================================================
-         2. MAIN HEADER (QA Item 2: Logo, Home, Aboutus, Product, Contact Us, Get a Quote Compulsory)
-    ======================================================== -->
-    <header class="site-header" id="siteHeader">
-      <div class="header-container">
-        <!-- Left: Logo & Mobile Toggle -->
-        <div class="header-left">
-          <button class="mobile-menu-btn" id="mobileMenuToggle" aria-label="Open Navigation Menu">
-            <svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2">
-              <path d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>
-
-          <a href="index.html" class="logo-brand" data-route="home">
-            <span class="logo-title">Ayurveda</span>
-          </a>
-        </div>
-
-        <!-- Center: Desktop Nav (QA Item 2, 22, 23, 24) -->
-        <nav class="desktop-nav" aria-label="Main Navigation">
-          <a href="index.html" class="nav-link active" data-route="home">Home</a>
-          <a href="about.html" class="nav-link" data-route="about">About Us</a>
-
-          <!-- Product with Mega-Menu Dropdown on Hover/Tap (QA Item 22) -->
-          <div class="nav-item-dropdown" id="navProductDropdown">
-            <a href="products.html" class="nav-link nav-dropdown-trigger" data-route="products" id="navProductTrigger">
-              <span>Product</span>
-              <svg class="nav-chevron-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            </a>
-
-            <!-- Mega-Menu Dropdown Panel -->
-            <div class="products-mega-menu" id="productsMegaMenu">
-              <div class="mega-menu-grid">
-                <div>
-                  <h4 class="mega-menu-col-title">Our Collections</h4>
-                  <ul class="mega-menu-list">
-                    <li>
-                      <a href="products.html" data-route="products" class="mega-menu-link">
-                        <span>All Products</span>
-                        <span class="mega-menu-badge">12+</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="products.html" data-route="products" class="mega-menu-link">
-                        <span>Homemade Hair Oils</span>
-                        <span class="mega-menu-badge">Popular</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="products.html" data-route="products" class="mega-menu-link">
-                        <span>Herbal Shampoos</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="products.html" data-route="products" class="mega-menu-link">
-                        <span>Nourishment Conditioner</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="products.html" data-route="products" class="mega-menu-link">
-                        <span>Mehndi &amp; Rosemary Hair Care</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="products.html" data-route="products" class="mega-menu-link">
-                        <span>Value Combo Packs</span>
-                        <span class="mega-menu-badge">Save ₹300</span>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-
-                <div class="mega-menu-featured-card">
-                  <div>
-                    <span class="mm-featured-title">✨ Big Combo Pro Max</span>
-                    <p class="mm-featured-desc">Complete Ayurvedic hair growth &amp; nourishment system with pure herbs.</p>
-                  </div>
-                  <a href="products.html#product/4" class="mm-featured-btn" data-route="pdp" data-id="4">View Special Pack ↗</a>
-                </div>
+            <div class="sona-point">
+              <div class="sona-point-icon">✦</div>
+              <div class="sona-point-text">
+                <strong>Rooted in natural ingredients</strong>
+                <span>Made for those who prefer herbal, nature-inspired haircare for everyday use.</span>
               </div>
             </div>
           </div>
 
-          <a href="contact.html" class="nav-link" data-route="contact">Contact Us</a>
-          <a href="orders.html" class="nav-link track-order-trigger" data-route="orders">My Orders</a>
+          <!-- CTA Buttons Row -->
+          <div class="sona-cta-row">
+            <a href="#products" class="sona-btn sona-btn-primary" data-route="products">
+              Shop Herbal Haircare
+            </a>
+            <a href="#founder" class="sona-btn sona-btn-secondary" id="btnKnowMoreAboutUs">
+              Know More About Us
+            </a>
+          </div>
 
-        </nav>
+          <!-- Below 3 Mini-Stats / Feature Cards -->
+          <div class="sona-mini-stats" role="tablist">
+            <div class="sona-mini-stat is-active" data-feature="shampoo" role="tab" aria-selected="true" tabindex="0">
+              <strong>Herbal Shampoo</strong>
+              <span>Gentle cleansing with a natural care feel</span>
+            </div>
+            <div class="sona-mini-stat" data-feature="oil" role="tab" aria-selected="false" tabindex="0">
+              <strong>Hair Oil</strong>
+              <span>Nourishing care for your regular routine</span>
+            </div>
+            <div class="sona-mini-stat" data-feature="care" role="tab" aria-selected="false" tabindex="0">
+              <strong>Natural Care</strong>
+              <span>Inspired by trusted herbal traditions</span>
+            </div>
+          </div>
+        </div>
 
-        <!-- Right: Actions -->
-        <div class="header-right">
-          <!-- Search trigger with 'What are you looking for?' -->
-          <button class="header-search-box-btn search-trigger-btn" aria-label="Search Products" title="Search">
-            <span class="header-search-text">What are you looking for?</span>
-            <svg viewBox="0 0 24 24">
-              <circle cx="11" cy="11" r="8" />
-              <path d="m21 21-4.35-4.35" />
-            </svg>
-          </button>
+        <!-- Right Column: 3D Interactive Stage with Images & Matching Floating Text Boxes -->
+        <div class="sona-stage" id="sonaStage">
+          <div class="sona-stage-glow"></div>
+          <div class="sona-ring ring-a"></div>
+          <div class="sona-ring ring-b"></div>
 
-          <!-- Account / User Icon -->
-          <a href="#account" class="header-action-btn header-account-btn" data-route="account" aria-label="User Account / Sign In" title="My Account">
-            <svg viewBox="0 0 24 24">
-              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-              <circle cx="12" cy="7" r="4" />
-            </svg>
-          </a>
+          <div class="sona-spotlight" id="sonaSpotlight" data-depth="0.10">
+            <div class="sona-spotlight-shadow"></div>
 
-          <!-- Cart Drawer Button -->
-          <button class="header-action-btn cart-btn-wrap cart-drawer-trigger" aria-label="Shopping Cart" title="Cart">
-            <svg viewBox="0 0 24 24">
-              <circle cx="8" cy="21" r="1" />
-              <circle cx="19" cy="21" r="1" />
-              <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
-            </svg>
-            <span class="cart-bubble cart-count-bubble">0</span>
-          </button>
+            <div class="sona-main-visual" id="sonaMainVisual">
+              <!-- Center Main Front Card: Hair Oil + Herbal Shampoo with Red Ribbon Bow -->
+              <div class="sona-main-card front-card">
+                <img src="https://cdn.shopify.com/s/files/1/0808/3944/2652/files/SN4.png?v=1774590149" alt="Ayurveda Home Made Hair Oil &amp; Herbal Shampoo">
+              </div>
+
+              <!-- Left Side Card: Hair Oil on Golden Pedestal -->
+              <div class="sona-side-card side-card-left">
+                <img src="https://cdn.shopify.com/s/files/1/0808/3944/2652/files/Oil_edited.png?v=1774590337" alt="Ayurveda Home Made Hair Oil">
+              </div>
+
+              <!-- Right Side Card: Herbal Shampoo with Botanicals -->
+              <div class="sona-side-card side-card-right">
+                <img src="https://cdn.shopify.com/s/files/1/0808/3944/2652/files/SN10.png?v=1774590040" alt="Ayurveda Herbal Shampoo">
+              </div>
+            </div>
+
+            <!-- Floating Top Left Box (Herbal Shampoo) -->
+            <div class="sona-float-card ingredient-card ingredient-card-1" data-depth="0.24">
+              <div class="sona-float-label">Herbal Shampoo</div>
+              <p>Created for a fresh, clean wash experience with a soft, natural care feel.</p>
+            </div>
+
+            <!-- Floating Top Right Box (Hair Oil) -->
+            <div class="sona-float-card ingredient-card ingredient-card-2" data-depth="0.20">
+              <div class="sona-float-label">Hair Oil</div>
+              <p>A nourishing step in your routine that complements regular herbal haircare.</p>
+            </div>
+
+            <!-- Floating Traditional Care Card (Overlapping mid-left of visual) -->
+            <div class="sona-float-card ingredient-card-3" data-depth="0.26">
+              <div class="sona-float-label">Traditional Care</div>
+              <p>Inspired by time-trusted herbal hair rituals for everyday beauty and care.</p>
+            </div>
+
+            <!-- Floating Pill Chips -->
+            <div class="sona-chip chip-1" data-depth="0.28">Herbal Haircare</div>
+            <div class="sona-chip chip-2" data-depth="0.22">Naturally Inspired</div>
+            <div class="sona-chip chip-3" data-depth="0.30">Shampoo • Oil • Mehandi</div>
+          </div>
+
+          <!-- Row of 3 Thumbnail Cards (Exact Reference Match) -->
+          <div class="sona-gallery-strip">
+            <div class="sona-gallery-card is-active" data-feature="care">
+              <img src="https://cdn.shopify.com/s/files/1/0808/3944/2652/files/SN3.png?v=1774590337" alt="Ayurveda Big Combo Oil Shampoo Mehndi" loading="lazy">
+            </div>
+            <div class="sona-gallery-card" data-feature="shampoo">
+              <img src="https://cdn.shopify.com/s/files/1/0808/3944/2652/files/SN9.png?v=1774590040" alt="Ayurveda Herbal Shampoo with Coconut &amp; Amla" loading="lazy">
+            </div>
+            <div class="sona-gallery-card" data-feature="oil">
+              <img src="https://cdn.shopify.com/s/files/1/0808/3944/2652/files/SN10.png?v=1774590040" alt="Ayurveda Herbal Shampoo Botanicals" loading="lazy">
+            </div>
+          </div>
         </div>
       </div>
-    </header>
+    </section>
 
-    <!-- ========================================================
-         MAIN CONTENT AREA
-    ======================================================== -->
-    <main id="mainContent" class="main-content">
-      <!-- Dynamically rendered by app.js -->
+    <!-- 5. CUSTOMER LOVE / REVIEWS SECTION (Exact Reference Match) -->
+    <section class="sona-reviews-section">
+      <div class="sona-reviews-inner">
+        <div class="sona-reviews-eyebrow">Customer Love</div>
+        <h2 class="sona-reviews-title">Loved by Happy Customers</h2>
+        <p class="sona-reviews-subtitle">Real reviews from customers who trusted Ayurveda for natural hair care.</p>
+      </div>
+
+      <div class="sona-reviews-marquee">
+        <div class="sona-reviews-track">
+          
+            <div class="sona-review-card">
+              <div>
+                <div class="sona-review-stars">★★★★★</div>
+                <div class="sona-review-product">Herbal Hair Oil</div>
+                <p class="sona-review-text">“My hair fall feels much better after regular use. The oil feels pure and homemade.”</p>
+              </div>
+              <div class="sona-review-user">
+                <div class="sona-review-avatar">PS</div>
+                <div>
+                  <p class="sona-review-name">Priya Sharma</p>
+                  <p class="sona-review-city">Mumbai</p>
+                </div>
+              </div>
+            </div>
+          
+            <div class="sona-review-card">
+              <div>
+                <div class="sona-review-stars">★★★★★</div>
+                <div class="sona-review-product">Herbal Shampoo</div>
+                <p class="sona-review-text">“The shampoo is mild and does not make my hair dry. It gives a very natural clean feel.”</p>
+              </div>
+              <div class="sona-review-user">
+                <div class="sona-review-avatar">NK</div>
+                <div>
+                  <p class="sona-review-name">Neha Kapoor</p>
+                  <p class="sona-review-city">Delhi</p>
+                </div>
+              </div>
+            </div>
+          
+            <div class="sona-review-card">
+              <div>
+                <div class="sona-review-stars">★★★★★</div>
+                <div class="sona-review-product">Herbal Conditioner</div>
+                <p class="sona-review-text">“After using the conditioner, my hair feels softer, smoother and easier to manage.”</p>
+              </div>
+              <div class="sona-review-user">
+                <div class="sona-review-avatar">RJ</div>
+                <div>
+                  <p class="sona-review-name">Ritika Jain</p>
+                  <p class="sona-review-city">Pune</p>
+                </div>
+              </div>
+            </div>
+          
+            <div class="sona-review-card">
+              <div>
+                <div class="sona-review-stars">★★★★★</div>
+                <div class="sona-review-product">Rosemary Hair Spray</div>
+                <p class="sona-review-text">“The rosemary spray feels very refreshing on the scalp. I use it daily after bath.”</p>
+              </div>
+              <div class="sona-review-user">
+                <div class="sona-review-avatar">AM</div>
+                <div>
+                  <p class="sona-review-name">Anjali Mehta</p>
+                  <p class="sona-review-city">Ahmedabad</p>
+                </div>
+              </div>
+            </div>
+          
+            <div class="sona-review-card">
+              <div>
+                <div class="sona-review-stars">★★★★★</div>
+                <div class="sona-review-product">Mehndi Powder</div>
+                <p class="sona-review-text">“The mehndi powder is very fine and easy to apply. The colour came out really beautiful.”</p>
+              </div>
+              <div class="sona-review-user">
+                <div class="sona-review-avatar">SR</div>
+                <div>
+                  <p class="sona-review-name">Sneha Rao</p>
+                  <p class="sona-review-city">Bengaluru</p>
+                </div>
+              </div>
+            </div>
+          
+            <div class="sona-review-card">
+              <div>
+                <div class="sona-review-stars">★★★★★</div>
+                <div class="sona-review-product">Oil + Shampoo Combo</div>
+                <p class="sona-review-text">“The combo is perfect for my hair fall routine. Both products feel natural and gentle.”</p>
+              </div>
+              <div class="sona-review-user">
+                <div class="sona-review-avatar">KN</div>
+                <div>
+                  <p class="sona-review-name">Kavya Nair</p>
+                  <p class="sona-review-city">Kochi</p>
+                </div>
+              </div>
+            </div>
+          
+            <div class="sona-review-card">
+              <div>
+                <div class="sona-review-stars">★★★★★</div>
+                <div class="sona-review-product">Pro Max Combo</div>
+                <p class="sona-review-text">“I ordered the full combo and it feels like a complete natural hair care routine.”</p>
+              </div>
+              <div class="sona-review-user">
+                <div class="sona-review-avatar">MS</div>
+                <div>
+                  <p class="sona-review-name">Meera Shah</p>
+                  <p class="sona-review-city">Surat</p>
+                </div>
+              </div>
+            </div>
+          
+            <div class="sona-review-card">
+              <div>
+                <div class="sona-review-stars">★★★★★</div>
+                <div class="sona-review-product">Hair Growth Spray</div>
+                <p class="sona-review-text">“The spray is easy to apply and feels cooling on the scalp. Very convenient to use.”</p>
+              </div>
+              <div class="sona-review-user">
+                <div class="sona-review-avatar">SK</div>
+                <div>
+                  <p class="sona-review-name">Simran Kaur</p>
+                  <p class="sona-review-city">Chandigarh</p>
+                </div>
+              </div>
+            </div>
+          
+            <div class="sona-review-card">
+              <div>
+                <div class="sona-review-stars">★★★★★</div>
+                <div class="sona-review-product">Oil + Mehndi Combo</div>
+                <p class="sona-review-text">“Both products feel natural. The mehndi quality is really impressive and fresh.”</p>
+              </div>
+              <div class="sona-review-user">
+                <div class="sona-review-avatar">IP</div>
+                <div>
+                  <p class="sona-review-name">Isha Patel</p>
+                  <p class="sona-review-city">Vadodara</p>
+                </div>
+              </div>
+            </div>
+          
+            <div class="sona-review-card">
+              <div>
+                <div class="sona-review-stars">★★★★★</div>
+                <div class="sona-review-product">Shampoo + Conditioner</div>
+                <p class="sona-review-text">“This pair made my hair smoother without that harsh chemical feeling. Loved it.”</p>
+              </div>
+              <div class="sona-review-user">
+                <div class="sona-review-avatar">RM</div>
+                <div>
+                  <p class="sona-review-name">Rhea Malhotra</p>
+                  <p class="sona-review-city">Gurugram</p>
+                </div>
+              </div>
+            </div>
+          
+            <div class="sona-review-card">
+              <div>
+                <div class="sona-review-stars">★★★★★</div>
+                <div class="sona-review-product">Hair Fall Control Combo</div>
+                <p class="sona-review-text">“This combo is good if you want oil, shampoo and mehndi together for hair care.”</p>
+              </div>
+              <div class="sona-review-user">
+                <div class="sona-review-avatar">SM</div>
+                <div>
+                  <p class="sona-review-name">Shreya Mishra</p>
+                  <p class="sona-review-city">Noida</p>
+                </div>
+              </div>
+            </div>
+          
+            <div class="sona-review-card">
+              <div>
+                <div class="sona-review-stars">★★★★★</div>
+                <div class="sona-review-product">Herbal Hair Oil</div>
+                <p class="sona-review-text">“The oil is not too heavy and the fragrance feels herbal, not artificial.”</p>
+              </div>
+              <div class="sona-review-user">
+                <div class="sona-review-avatar">PV</div>
+                <div>
+                  <p class="sona-review-name">Pooja Verma</p>
+                  <p class="sona-review-city">Jaipur</p>
+                </div>
+              </div>
+            </div>
+          
+            <div class="sona-review-card">
+              <div>
+                <div class="sona-review-stars">★★★★★</div>
+                <div class="sona-review-product">Herbal Hair Oil</div>
+                <p class="sona-review-text">“My hair fall feels much better after regular use. The oil feels pure and homemade.”</p>
+              </div>
+              <div class="sona-review-user">
+                <div class="sona-review-avatar">PS</div>
+                <div>
+                  <p class="sona-review-name">Priya Sharma</p>
+                  <p class="sona-review-city">Mumbai</p>
+                </div>
+              </div>
+            </div>
+          
+            <div class="sona-review-card">
+              <div>
+                <div class="sona-review-stars">★★★★★</div>
+                <div class="sona-review-product">Herbal Shampoo</div>
+                <p class="sona-review-text">“The shampoo is mild and does not make my hair dry. It gives a very natural clean feel.”</p>
+              </div>
+              <div class="sona-review-user">
+                <div class="sona-review-avatar">NK</div>
+                <div>
+                  <p class="sona-review-name">Neha Kapoor</p>
+                  <p class="sona-review-city">Delhi</p>
+                </div>
+              </div>
+            </div>
+          
+            <div class="sona-review-card">
+              <div>
+                <div class="sona-review-stars">★★★★★</div>
+                <div class="sona-review-product">Herbal Conditioner</div>
+                <p class="sona-review-text">“After using the conditioner, my hair feels softer, smoother and easier to manage.”</p>
+              </div>
+              <div class="sona-review-user">
+                <div class="sona-review-avatar">RJ</div>
+                <div>
+                  <p class="sona-review-name">Ritika Jain</p>
+                  <p class="sona-review-city">Pune</p>
+                </div>
+              </div>
+            </div>
+          
+            <div class="sona-review-card">
+              <div>
+                <div class="sona-review-stars">★★★★★</div>
+                <div class="sona-review-product">Rosemary Hair Spray</div>
+                <p class="sona-review-text">“The rosemary spray feels very refreshing on the scalp. I use it daily after bath.”</p>
+              </div>
+              <div class="sona-review-user">
+                <div class="sona-review-avatar">AM</div>
+                <div>
+                  <p class="sona-review-name">Anjali Mehta</p>
+                  <p class="sona-review-city">Ahmedabad</p>
+                </div>
+              </div>
+            </div>
+          
+            <div class="sona-review-card">
+              <div>
+                <div class="sona-review-stars">★★★★★</div>
+                <div class="sona-review-product">Mehndi Powder</div>
+                <p class="sona-review-text">“The mehndi powder is very fine and easy to apply. The colour came out really beautiful.”</p>
+              </div>
+              <div class="sona-review-user">
+                <div class="sona-review-avatar">SR</div>
+                <div>
+                  <p class="sona-review-name">Sneha Rao</p>
+                  <p class="sona-review-city">Bengaluru</p>
+                </div>
+              </div>
+            </div>
+          
+            <div class="sona-review-card">
+              <div>
+                <div class="sona-review-stars">★★★★★</div>
+                <div class="sona-review-product">Oil + Shampoo Combo</div>
+                <p class="sona-review-text">“The combo is perfect for my hair fall routine. Both products feel natural and gentle.”</p>
+              </div>
+              <div class="sona-review-user">
+                <div class="sona-review-avatar">KN</div>
+                <div>
+                  <p class="sona-review-name">Kavya Nair</p>
+                  <p class="sona-review-city">Kochi</p>
+                </div>
+              </div>
+            </div>
+          
+            <div class="sona-review-card">
+              <div>
+                <div class="sona-review-stars">★★★★★</div>
+                <div class="sona-review-product">Pro Max Combo</div>
+                <p class="sona-review-text">“I ordered the full combo and it feels like a complete natural hair care routine.”</p>
+              </div>
+              <div class="sona-review-user">
+                <div class="sona-review-avatar">MS</div>
+                <div>
+                  <p class="sona-review-name">Meera Shah</p>
+                  <p class="sona-review-city">Surat</p>
+                </div>
+              </div>
+            </div>
+          
+            <div class="sona-review-card">
+              <div>
+                <div class="sona-review-stars">★★★★★</div>
+                <div class="sona-review-product">Hair Growth Spray</div>
+                <p class="sona-review-text">“The spray is easy to apply and feels cooling on the scalp. Very convenient to use.”</p>
+              </div>
+              <div class="sona-review-user">
+                <div class="sona-review-avatar">SK</div>
+                <div>
+                  <p class="sona-review-name">Simran Kaur</p>
+                  <p class="sona-review-city">Chandigarh</p>
+                </div>
+              </div>
+            </div>
+          
+            <div class="sona-review-card">
+              <div>
+                <div class="sona-review-stars">★★★★★</div>
+                <div class="sona-review-product">Oil + Mehndi Combo</div>
+                <p class="sona-review-text">“Both products feel natural. The mehndi quality is really impressive and fresh.”</p>
+              </div>
+              <div class="sona-review-user">
+                <div class="sona-review-avatar">IP</div>
+                <div>
+                  <p class="sona-review-name">Isha Patel</p>
+                  <p class="sona-review-city">Vadodara</p>
+                </div>
+              </div>
+            </div>
+          
+            <div class="sona-review-card">
+              <div>
+                <div class="sona-review-stars">★★★★★</div>
+                <div class="sona-review-product">Shampoo + Conditioner</div>
+                <p class="sona-review-text">“This pair made my hair smoother without that harsh chemical feeling. Loved it.”</p>
+              </div>
+              <div class="sona-review-user">
+                <div class="sona-review-avatar">RM</div>
+                <div>
+                  <p class="sona-review-name">Rhea Malhotra</p>
+                  <p class="sona-review-city">Gurugram</p>
+                </div>
+              </div>
+            </div>
+          
+            <div class="sona-review-card">
+              <div>
+                <div class="sona-review-stars">★★★★★</div>
+                <div class="sona-review-product">Hair Fall Control Combo</div>
+                <p class="sona-review-text">“This combo is good if you want oil, shampoo and mehndi together for hair care.”</p>
+              </div>
+              <div class="sona-review-user">
+                <div class="sona-review-avatar">SM</div>
+                <div>
+                  <p class="sona-review-name">Shreya Mishra</p>
+                  <p class="sona-review-city">Noida</p>
+                </div>
+              </div>
+            </div>
+          
+            <div class="sona-review-card">
+              <div>
+                <div class="sona-review-stars">★★★★★</div>
+                <div class="sona-review-product">Herbal Hair Oil</div>
+                <p class="sona-review-text">“The oil is not too heavy and the fragrance feels herbal, not artificial.”</p>
+              </div>
+              <div class="sona-review-user">
+                <div class="sona-review-avatar">PV</div>
+                <div>
+                  <p class="sona-review-name">Pooja Verma</p>
+                  <p class="sona-review-city">Jaipur</p>
+                </div>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+
+      <div class="sona-reviews-inner">
+        <div class="sona-review-badges">
+          <div class="sona-review-badge">★★★★★ Rated by Customers</div>
+          <div class="sona-review-badge">Natural Hair Care</div>
+          <div class="sona-review-badge">Fast Delivery</div>
+          <div class="sona-review-badge">Trusted Herbal Products</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. FEATURED IN NEWS SECTION (Exact reference match) -->
+    <section class="sona-news-feature">
+      <div class="sona-news-wrap">
+        <div class="sona-news-image">
+          <img src="./images/sona-news-feature.jpg" alt="Ayurveda featured in newspaper" onerror="this.src='https://cdn.shopify.com/s/files/1/0601/8242/9745/files/SnapInsta.to_731702558_18000499061956624_3334212273510406262_n.jpg?v=1783541788'" loading="lazy">
+        </div>
+
+        <div class="sona-news-content">
+          <div class="sona-news-eyebrow">Featured in News</div>
+          <h2>From a Small Village to Thousands of Homes</h2>
+          <p>Ayurveda’s journey has been featured in the news for bringing homemade herbal hair care from Hirakani Sonali Waghmode to customers across India.</p>
+
+          <div class="sona-news-points">
+            <div class="sona-news-point">Founder-led homemade herbal brand</div>
+            <div class="sona-news-point">Rooted in traditional hair care wisdom</div>
+            <div class="sona-news-point">Trusted by thousands of happy customers</div>
+          </div>
+
+          <div>
+            <div class="sona-news-badge">Recognised for Natural Hair Care</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. FREQUENTLY ASKED QUESTIONS -->
+    <section class="faq-section" id="faqSection">
+      <div class="faq-container">
+        <div class="faq-header">
+          <div class="faq-eyebrow">FAQs</div>
+          <h2 class="faq-title">Frequently Asked Questions</h2>
+          <p class="faq-subtitle">Everything you need to know about Ayurveda’s natural hair care products.</p>
+        </div>
+
+        <div class="faq-list">
+          
+            <div class="faq-item active">
+              <button class="faq-question-btn" type="button">
+                <span>Are Ayurveda products natural?</span>
+                <span class="faq-toggle-icon" aria-hidden="true">
+                  <svg class="faq-icon-svg" viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" fill="none">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                </span>
+              </button>
+              <div class="faq-answer-wrap">
+                <div class="faq-answer-inner">Yes, our products are made with herbal and natural ingredients, crafted to support healthy hair care without harsh chemicals.</div>
+              </div>
+            </div>
+          
+            <div class="faq-item ">
+              <button class="faq-question-btn" type="button">
+                <span>Which product is best for hair fall?</span>
+                <span class="faq-toggle-icon" aria-hidden="true">
+                  <svg class="faq-icon-svg" viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" fill="none">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                </span>
+              </button>
+              <div class="faq-answer-wrap">
+                <div class="faq-answer-inner">For hair fall concerns, you can use our Herbal Hair Oil along with Herbal Shampoo and Rosemary Hair Spray as a complete routine.</div>
+              </div>
+            </div>
+          
+            <div class="faq-item ">
+              <button class="faq-question-btn" type="button">
+                <span>Can I use the hair oil daily?</span>
+                <span class="faq-toggle-icon" aria-hidden="true">
+                  <svg class="faq-icon-svg" viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" fill="none">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                </span>
+              </button>
+              <div class="faq-answer-wrap">
+                <div class="faq-answer-inner">You can use it 2–3 times a week or as per your hair care routine. Apply gently on the scalp and leave it for a few hours before wash.</div>
+              </div>
+            </div>
+          
+            <div class="faq-item ">
+              <button class="faq-question-btn" type="button">
+                <span>Is the shampoo suitable for regular use?</span>
+                <span class="faq-toggle-icon" aria-hidden="true">
+                  <svg class="faq-icon-svg" viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" fill="none">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                </span>
+              </button>
+              <div class="faq-answer-wrap">
+                <div class="faq-answer-inner">Yes, the herbal shampoo is made to be gentle on hair and scalp. It can be used regularly depending on your hair type.</div>
+              </div>
+            </div>
+          
+            <div class="faq-item ">
+              <button class="faq-question-btn" type="button">
+                <span>How fast will I receive my order?</span>
+                <span class="faq-toggle-icon" aria-hidden="true">
+                  <svg class="faq-icon-svg" viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" fill="none">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                </span>
+              </button>
+              <div class="faq-answer-wrap">
+                <div class="faq-answer-inner">Most orders are dispatched quickly and delivered within 3 days depending on your location and courier availability. 93% of orders are delivered within 3 days from the date of dispatch.</div>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. MEET OUR FOUNDER (Exact Reference Match) -->
+    <section class="sona-founder" id="founderSection">
+      <div class="sf-wrap">
+        <div class="sf-image">
+          <img src="https://cdn.shopify.com/s/files/1/0601/8242/9745/files/0Q7A2433.jpg_1_1.jpg?v=1783542548" alt="Sonali Waghmode Founder of Ayurveda" loading="lazy">
+          <div class="sf-badge">
+            <span>Founder</span>
+            Sonali Waghmode
+          </div>
+        </div>
+
+        <div class="sf-content">
+          <div class="sf-eyebrow">Meet Our Founder</div>
+          <h2>Rooted in Tradition, Made with Care.</h2>
+          <p>Ayurveda was started by Sonali Waghmode with a simple belief — hair care should be natural, honest and trusted by every family.</p>
+          <p>Inspired by traditional herbal knowledge, every product is thoughtfully prepared to bring pure, effective and gentle hair care into Indian homes.</p>
+
+          <div class="sf-quote">
+            “Our goal is to make herbal hair care simple, trustworthy and accessible for every home.”
+          </div>
+
+          <div class="sf-name">
+            <div>
+              <div class="sf-sign">Sonali</div>
+              <div class="sf-role">Founder, Ayurveda</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. OUR PROMISE & STATS (Exact Reference Match) -->
+    <section class="sona-promise-white">
+      <div class="spw-wrap">
+        <div class="spw-head">
+          <div class="spw-eyebrow">Our Promise</div>
+          <h2>Pure Ingredients.<br>Honest Hair Care.</h2>
+          <p>Every Ayurveda product is thoughtfully prepared using traditional herbal ingredients to nourish your hair naturally.</p>
+        </div>
+
+        <div class="spw-grid">
+          <div class="spw-card">
+            <div class="spw-icon">
+              <svg viewBox="0 0 24 24"><path d="M5 21c8-1 14-7 15-18C10 4 4 10 3 20"></path><path d="M4 20c4-5 8-8 14-11"></path></svg>
+            </div>
+            <h3>100% Herbal</h3>
+            <p>Prepared with carefully selected herbal ingredients inspired by traditional Indian hair care.</p>
+          </div>
+
+          <div class="spw-card">
+            <div class="spw-icon">
+              <svg viewBox="0 0 24 24"><path d="M9 2h6"></path><path d="M10 2v6l-5 9a4 4 0 0 0 3.5 6h7a4 4 0 0 0 3.5-6l-5-9V2"></path><path d="M7 16h10"></path></svg>
+            </div>
+            <h3>No Harsh Chemicals</h3>
+            <p>Gentle formulas made without unnecessary harsh chemicals for everyday family use.</p>
+          </div>
+
+          <div class="spw-card">
+            <div class="spw-icon">
+              <svg viewBox="0 0 24 24"><path d="M7 10h10"></path><path d="M8 10l1 10h6l1-10"></path><path d="M9 6a3 3 0 0 1 6 0v4"></path><path d="M4 20h16"></path></svg>
+            </div>
+            <h3>Traditional Formula</h3>
+            <p>Rooted in age-old herbal wisdom and prepared with care for healthy-looking hair.</p>
+          </div>
+
+          <div class="spw-card">
+            <div class="spw-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 21s-7-4.4-9.3-9A5.4 5.4 0 0 1 12 6a5.4 5.4 0 0 1 9.3 6c-2.3 4.6-9.3 9-9.3 9z"></path></svg>
+            </div>
+            <h3>Trusted by 2.5L+</h3>
+            <p>Loved by thousands of customers across India as part of their hair care routine.</p>
+          </div>
+        </div>
+
+        <div class="spw-stats">
+          <div class="spw-stat">
+            <strong>2.5L+</strong>
+            <span>Happy Customers</span>
+          </div>
+          <div class="spw-stat">
+            <strong>100%</strong>
+            <span>Herbal Focus</span>
+          </div>
+          <div class="spw-stat">
+            <strong>4.8★</strong>
+            <span>Customer Rating</span>
+          </div>
+        </div>
+      </div>
+    </section>
     </main>
 
-    <!-- ========================================================
-         SITE FOOTER (Rendered by modular src/js/footer.js - QA Item 4, 12, 16, 28)
-    ======================================================== -->
+    <!-- Unified Dynamic Layout Footer Root (Single Source of Truth in src/js/footer.js) -->
     <div id="siteFooterRoot"></div>
   </div>
 
-  <!-- ========================================================
-       MODAL BACKDROP (SHARED)
-  ======================================================== -->
-  <div class="modal-backdrop" id="modalBackdrop"></div>
-
-  <!-- ========================================================
-       SLIDE-OUT SHOPPING CART DRAWER
-  ======================================================== -->
-  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping Cart">
-    <div class="cart-drawer-header">
-      <div class="cart-drawer-title">
-        <span>Shopping Cart</span>
-        <span class="cart-count-badge cart-count-bubble">0</span>
-      </div>
-      <button class="cart-close-btn" id="cartDrawerClose" aria-label="Close cart">✕</button>
-    </div>
-
-    <!-- Free shipping meter -->
-    <div class="free-shipping-goal">
-      <div class="free-shipping-text" id="freeShippingText">
-        🚚 Add Rs. 999 more for Free Express Delivery!
-      </div>
-      <div class="free-shipping-bar">
-        <div class="free-shipping-fill" id="freeShippingFill" style="width: 0%;"></div>
-      </div>
-    </div>
-
-    <!-- Items list -->
-    <div class="cart-drawer-body" id="cartDrawerBody">
-      <!-- Dynamic cart items rendered by cart.js -->
-    </div>
-
-    <!-- Footer -->
-    <div class="cart-drawer-footer">
-      <div class="cart-promo-row">
-        <input class="cart-promo-input" id="cartPromoInput" type="text" placeholder="Promo code (e.g. HERBAL10)" />
-        <button class="cart-promo-btn" id="cartPromoBtn" type="button">Apply</button>
-      </div>
-
-      <div class="cart-totals-row">
-        <span class="cart-total-label">Subtotal</span>
-        <span class="cart-total-val" id="cartSubtotal">Rs. 0.00</span>
-      </div>
-
-      <button class="checkout-btn" id="cartCheckoutBtn" type="button">
-        🔒 Fastrr / 1-Click Secure Checkout
-      </button>
-
-      <div class="cart-security-badge">
-        <span>🛡️ 100% Genuine Herbal</span> • <span>93% 3-Day Express Transit</span>
-      </div>
-    </div>
-  </aside>
-
-  <!-- ========================================================
-       MOBILE NAVIGATION DRAWER
-  ======================================================== -->
-  <aside class="mobile-nav-drawer" id="mobileNavDrawer" aria-label="Mobile Navigation">
-    <div class="mobile-drawer-header">
-      <span style="font-size: 20px; font-weight: 800; color: #ffffff;">Ayurveda</span>
-      <button class="mobile-close-btn" id="mobileDrawerClose" aria-label="Close Navigation">✕</button>
-    </div>
-    <div class="mobile-drawer-body">
-      <a class="mobile-nav-link active" href="index.html" data-route="home">
-        <span>Home</span>
-        <span>›</span>
-      </a>
-      <a class="mobile-nav-link" href="about.html" data-route="about">
-        <span>About Us</span>
-        <span>›</span>
-      </a>
-      <a class="mobile-nav-link" href="products.html" data-route="products">
-        <span>Product</span>
-        <span>›</span>
-      </a>
-      <a class="mobile-nav-link" href="contact.html" data-route="contact">
-        <span>Contact Us</span>
-        <span>›</span>
-      </a>
-      <a class="mobile-nav-link track-order-trigger" href="orders.html" data-route="orders">
-        <span>My Orders & Tracking</span>
-        <span>›</span>
-      </a>
-      <a class="mobile-nav-link" href="index.html#account" data-route="account">
-        <span>My Account / Sign In</span>
-        <span>›</span>
-      </a>
-      <button type="button" class="nav-quote-btn" id="mobileGetQuoteBtn" style="margin-top: 14px; width: 100%; justify-content: center;">
-        <span>Get a Quote ⚡</span>
-      </button>
-    </div>
-    <div class="mobile-drawer-footer">
-      <div class="mobile-help-contact">
-        <strong>Need Ayurvedic Guidance?</strong><br />
-        Call / WhatsApp: <a href="tel:9325260725" style="color: #084e10; font-weight: 700;">+91 9325260725</a>
-      </div>
-    </div>
-  </aside>
-
-  <!-- Global Modal Backdrop -->
-  <div class="modal-backdrop" id="modalBackdrop"></div>
-
-  <!-- ========================================================
-       INSTAGRAM REEL STORY VIEWER MODAL
-  ======================================================== -->
-  <div class="reel-modal" id="reelModal">
-    <div class="reel-modal-box">
-      <button class="reel-close-btn" id="reelCloseBtn">✕</button>
-      <button class="reel-nav-btn reel-prev-btn" id="reelPrevBtn">‹</button>
-      
-      <video class="reel-modal-video" id="reelVideo" playsinline controls loop></video>
-      
-      <button class="reel-nav-btn reel-next-btn" id="reelNextBtn">›</button>
-
-      <div class="reel-bottom-bar">
-        <div class="reel-modal-info">
-          <div class="reel-modal-title" id="reelTitle">Ayurveda Story</div>
-        </div>
-        <a class="reel-cta-btn" id="reelCtaBtn" href="#products">Shop Now</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- ========================================================
-       PREDICTIVE PRODUCT SEARCH MODAL
-  ======================================================== -->
-  <div class="search-modal" id="searchModal">
-    <div class="search-box-container">
-      <div class="search-input-wrap">
-        <span class="search-icon-left">🔍</span>
-        <input class="search-input-field" id="searchInput" type="text" placeholder="Search by product name, hair concern, combo..." autocomplete="off" />
-        <span class="search-close-icon" id="searchCloseBtn">✕</span>
-      </div>
-      <div class="search-results-list" id="searchResults">
-        <!-- Rendered dynamically -->
-      </div>
-    </div>
-  </div>
-
-  <!-- ========================================================
-       ORDER TRACKING LOOKUP MODAL
-  ======================================================== -->
-  <div class="search-modal" id="orderTrackModal">
-    <div class="search-box-container" style="max-width: 520px; width: 100%; border-radius: 20px; box-shadow: 0 25px 60px rgba(0,0,0,0.35);">
-      <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; padding-bottom: 14px;">
-        <div style="display: flex; align-items: center; gap: 10px;">
-          <span style="font-size: 22px;">📦</span>
-          <div>
-            <h3 style="font-size: 19px; font-weight: 800; color: #111; margin: 0;">My Orders & Tracking</h3>
-            <span style="font-size: 11.5px; color: #084e10; font-weight: 700;">Official Ayurveda Express Tracking</span>
-          </div>
-        </div>
-        <button id="trackModalClose" type="button" aria-label="Close modal" style="background: #f1f5f2; border: none; font-size: 18px; color: #555; cursor: pointer; width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.2s;">✕</button>
-      </div>
-
-      <form id="orderTrackForm" style="display: flex; flex-direction: column; gap: 14px; margin-top: 14px;">
-        <p style="font-size: 13.5px; color: #444; line-height: 1.5; margin: 0;">Enter your <strong>Order ID</strong> (e.g. 1024 or AYURVEDA-1024) or <strong>Registered Mobile Number</strong> to see live dispatch status:</p>
-        <div style="display: flex; gap: 8px;">
-          <input id="trackOrderInput" type="text" required placeholder="Order ID or 10-digit Mobile" style="flex: 1; padding: 13px 16px; border-radius: 12px; border: 1.5px solid #d0d7d1; font-size: 14px; outline: none; transition: border-color 0.2s;" />
-          <button type="submit" style="background: #084e10; color: #fff; padding: 0 22px; border: none; border-radius: 12px; font-weight: 800; font-size: 14px; cursor: pointer; transition: background 0.2s;">Track Order</button>
-        </div>
-      </form>
-
-      <div style="display: flex; align-items: center; justify-content: space-between; padding: 12px 14px; background: #f8faf8; border-radius: 12px; border: 1px dashed #c8decb; margin-top: 6px;">
-        <span style="font-size: 12px; color: #555;">Can't find your order number?</span>
-        <a href="https://wa.me/919325260725?text=Hi%20Ayurveda,%20I%20want%20to%20check%20my%20order%20status" target="_blank" style="font-size: 12px; color: #1b5e20; font-weight: 800; text-decoration: underline;">WhatsApp Us ↗</a>
-      </div>
-
-      <div id="orderTrackResult" style="display: none;"></div>
-    </div>
-  </div>
-
-  <!-- ========================================================
-       STORE POLICIES MODAL
-  ======================================================== -->
-  <div class="search-modal" id="policyModal">
-    <div class="search-box-container" style="max-width: 680px; max-height: 85vh; overflow-y: auto;">
-      <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; padding-bottom: 14px;">
-        <h3 id="policyModalTitle" style="font-size: 20px; font-weight: 800; color: #084e10;">Policy</h3>
-        <button id="policyModalClose" style="font-size: 20px; color: #666; cursor: pointer;">✕</button>
-      </div>
-      <div id="policyModalBody" style="font-size: 14px; line-height: 1.7; color: #444; margin-top: 16px;"></div>
-    </div>
-  </div>
-
-  <!-- ========================================================
-       FLOATING "CHAT WITH SONA" WIDGET & CHAT APPLICATION
-       (Matches reference Sona Herbal widget pixel-for-pixel)
-  ======================================================== -->
-  <div class="sona-floating-chat-container" id="sonaFloatingChat">
-    <!-- Floating Trigger -->
-    <div class="sona-chat-trigger-wrap" id="sonaChatTriggerWrap">
-      <button class="sona-chat-dismiss-btn" id="sonaChatDismissBtn" title="Dismiss" aria-label="Dismiss chat prompt" type="button">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M18 6 6 18"></path>
-          <path d="m6 6 12 12"></path>
-        </svg>
-      </button>
-
-      <button class="sona-chat-trigger-btn" id="sonaChatOpenBtn" aria-label="Open Sona Herbal chat" type="button">
-        <span class="sona-chat-pill" id="sonaChatPill">Chat with Sona</span>
-        <span class="sona-chat-avatar-wrap">
-          <img class="sona-chat-avatar-img" src="/sona-chat-avatar.jpg" alt="Sona Herbal support" onerror="this.src='https://cdn.shopify.com/s/files/1/0601/8242/9745/files/0Q7A2433.jpg_1_1.jpg?v=1783542548'" />
-          <span class="sona-chat-online-dot"></span>
-        </span>
-      </button>
-    </div>
-
-    <!-- Interactive Chat Window -->
-    <section class="sona-chat-window" id="sonaChatWindow" aria-hidden="true" role="dialog" aria-label="Sona Herbal Support Chat">
-      <!-- Header -->
-      <header class="sona-chat-header">
-        <div class="sona-chat-header-bg-glow"></div>
-        <div class="sona-chat-header-content">
-          <div class="sona-chat-header-left">
-            <div class="sona-chat-header-icon-wrap" aria-hidden="true">
-              <svg class="sona-chat-header-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
-              </svg>
-            </div>
-            <div class="sona-chat-header-meta">
-              <h2 class="sona-chat-header-title">Ayurveda Support</h2>
-              <p class="sona-chat-header-subtitle">Ayurveda is online</p>
-            </div>
-          </div>
-
-          <button class="sona-chat-header-close-btn" id="sonaChatCloseBtn" aria-label="Close chat" type="button">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M18 6 6 18"></path>
-              <path d="m6 6 12 12"></path>
-            </svg>
-          </button>
-        </div>
-      </header>
-
-      <!-- Messages Body -->
-      <div class="sona-chat-body" id="sonaChatBody">
-        <div class="sona-chat-msg-row msg-bot">
-          <div class="sona-chat-msg-bubble">Hi 👋 Welcome to Ayurveda. How can I help you?</div>
-        </div>
-      </div>
-
-      <!-- Footer with Chips and Input -->
-      <div class="sona-chat-footer">
-        <!-- Quick Action Chips Row -->
-        <div class="sona-chat-chips-scroll" id="sonaChatChips">
-          <button class="sona-chat-chip" data-action="Track My Order" type="button">Track My Order</button>
-          <button class="sona-chat-chip is-active" data-action="COD Available hai kya?" type="button">COD Available hai kya?</button>
-          <button class="sona-chat-chip" data-action="Order kitne din me milega?" type="button">Order kitne din me milega?</button>
-          <button class="sona-chat-chip" data-action="Products genuine hai kya?" type="button">Products genuine hai kya?</button>
-          <button class="sona-chat-chip" data-action="Products & Usage" type="button">Products &amp; Usage</button>
-          <button class="sona-chat-chip" data-action="Talk to Support" type="button">Talk to Support</button>
-        </div>
-
-        <!-- Default "Please choose an option above" placeholder pill -->
-        <div class="sona-chat-input-placeholder-pill" id="sonaChatInputPlaceholder" role="button" tabindex="0" title="Click to type a custom message">
-          Please choose an option above
-        </div>
-
-        <!-- Active text form (shown when inputMode is enabled or user clicks placeholder) -->
-        <form class="sona-chat-input-form is-hidden" id="sonaChatForm">
-          <input class="sona-chat-input" id="sonaChatInput" type="text" placeholder="Type a message..." autocomplete="off" />
-          <button class="sona-chat-send-btn" id="sonaChatSendBtn" type="submit" aria-label="Send message" disabled>
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"></path>
-              <path d="m21.854 2.147-10.94 10.939"></path>
-            </svg>
-          </button>
-        </form>
-      </div>
-    </section>
-  </div>
-
-  <!-- ========================================================
-       FLOATING ACTION GROUP (QA Item 5: Whatsapp, Call, Top to Scroll)
-       Present on all pages
-  ======================================================== -->
-  <div class="floating-action-group" id="floatingActionGroup" aria-label="Quick Actions">
-    <!-- WhatsApp Floating Icon -->
-    <a href="https://wa.me/919325260725?text=Hello%20Ayurveda" target="_blank" rel="noopener noreferrer" class="floating-action-btn floating-btn-whatsapp" aria-label="Chat on WhatsApp">
-      <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
-      <span class="floating-action-tooltip">Chat on WhatsApp</span>
-    </a>
-
-    <!-- Call Floating Icon -->
-    <a href="tel:+919325260725" class="floating-action-btn floating-btn-call" aria-label="Call Samarth Ayurveda">
-      <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-      <span class="floating-action-tooltip">Click to Call</span>
-    </a>
-
-    <!-- Top to Scroll Button -->
-    <button type="button" class="floating-action-btn floating-btn-scrolltop" id="scrollTopBtn" aria-label="Scroll to Top">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
-      <span class="floating-action-tooltip">Scroll to Top</span>
-    </button>
-  </div>
-
-  <!-- ========================================================
-       GET A QUOTE / QUICK ENQUIRY MODAL (QA Item 2, 10, 13, 27)
-  ======================================================== -->
-  <div class="search-modal" id="enquiryModal">
-    <div class="enquiry-modal-box">
-      <div class="enquiry-modal-header">
-        <div>
-          <h3 class="enquiry-modal-title" id="enquiryModalTitle">Get a Quote / Product Enquiry</h3>
-          <p class="enquiry-modal-desc">Fill in your requirements below for personalized Ayurvedic guidance &amp; best pricing.</p>
-        </div>
-        <button id="enquiryModalClose" type="button" aria-label="Close modal" style="background: #f1f5f2; border: none; font-size: 18px; color: #555; cursor: pointer; width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">✕</button>
-      </div>
-
-      <form class="enquiry-form-grid" id="enquiryForm" novalidate>
-        <div class="enquiry-form-row">
-          <div class="form-group">
-            <label class="contact-label" for="enquiryFullName">Full Name*</label>
-            <input class="enquiry-input-field" type="text" id="enquiryFullName" name="fullName" required placeholder="e.g. Ramesh Patil" />
-            <span class="form-error-text" id="errEnquiryFullName" style="display: none;">Please enter your full name.</span>
-          </div>
-          <div class="form-group">
-            <label class="contact-label" for="enquiryEmail">Email Address*</label>
-            <input class="enquiry-input-field" type="email" id="enquiryEmail" name="email" required placeholder="e.g. ramesh@example.com" />
-            <span class="form-error-text" id="errEnquiryEmail" style="display: none;">Please enter a valid email address.</span>
-          </div>
-        </div>
-
-        <div class="enquiry-form-row">
-          <div class="form-group">
-            <label class="contact-label" for="enquiryPhone">Phone Number (10 Digits)*</label>
-            <input class="enquiry-input-field" type="tel" id="enquiryPhone" name="phone" required maxlength="10" placeholder="e.g. 9876543210" />
-            <span class="form-error-text" id="errEnquiryPhone" style="display: none;">Please enter a valid 10-digit phone number.</span>
-          </div>
-          <div class="form-group">
-            <label class="contact-label" for="enquiryProduct">Product / Concern*</label>
-            <input class="enquiry-input-field" type="text" id="enquiryProduct" name="product" required placeholder="Product Name or Hair Concern" />
-            <span class="form-error-text" id="errEnquiryProduct" style="display: none;">Please specify the product or concern.</span>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label class="contact-label" for="enquiryAddress">Delivery Address / City*</label>
-          <input class="enquiry-input-field" type="text" id="enquiryAddress" name="address" required placeholder="City, State &amp; Pincode" />
-          <span class="form-error-text" id="errEnquiryAddress" style="display: none;">Please enter your address.</span>
-        </div>
-
-        <div class="form-group">
-          <label class="contact-label" for="enquirySubject">Subject*</label>
-          <input class="enquiry-input-field" type="text" id="enquirySubject" name="subject" required placeholder="e.g. Bulk Quote / Hair Care Consultation" />
-          <span class="form-error-text" id="errEnquirySubject" style="display: none;">Please enter the subject.</span>
-        </div>
-
-        <div class="form-group">
-          <label class="contact-label" for="enquiryMessage">Message / Specific Requirements*</label>
-          <textarea class="enquiry-textarea-field" id="enquiryMessage" name="message" rows="3" required placeholder="Tell us about your hair type, scalp issues, or questions..."></textarea>
-          <span class="form-error-text" id="errEnquiryMessage" style="display: none;">Please enter your message.</span>
-        </div>
-
-        <!-- Captcha Verification (QA Item 27) -->
-        <div class="contact-captcha-wrapper" style="margin-top: 2px;">
-          <div class="captcha-header-label">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#084e10" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            <span>Captcha Verification*</span>
-          </div>
-
-          <div class="captcha-code-row">
-            <div class="captcha-code-display" id="enquiryCaptchaDisplay" title="Security Captcha Code"></div>
-            <button type="button" class="captcha-refresh-btn" id="enquiryCaptchaRefreshBtn" title="Generate New Captcha Code">
-              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5">
-                <path d="M23 4v6h-6M1 20v-6h6"/>
-                <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
-              </svg>
-              <span>Refresh</span>
-            </button>
-            <input class="captcha-input-field" type="text" id="enquiryCaptchaInput" name="captcha" required placeholder="Enter Captcha Code" autocomplete="off" maxlength="6" />
-          </div>
-          <span class="form-error-text" id="errEnquiryCaptcha" style="display: none;">Please enter the correct 5-character captcha code.</span>
-
-          <div class="google-recaptcha-widget" id="enquiryRecaptchaWidget">
-            <div class="recaptcha-checkbox-area" id="enquiryRecaptchaClickArea">
-              <div class="recaptcha-checkbox" id="enquiryRecaptchaCheckbox" role="checkbox" aria-checked="false" tabindex="0">
-                <div class="recaptcha-spinner" id="enquiryRecaptchaSpinner"></div>
-                <svg class="recaptcha-checkmark" id="enquiryRecaptchaCheckmark" viewBox="0 0 24 24">
-                  <path d="M4 12l5 5L20 6" fill="none" stroke="#00a859" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </div>
-              <span class="recaptcha-label">I'm not a robot</span>
-            </div>
-            <div class="recaptcha-brand">
-              <svg class="recaptcha-logo-icon" viewBox="0 0 32 32" width="28" height="28">
-                <path fill="#4285F4" d="M16 2.5a13.5 13.5 0 0 0-9.55 3.95l3.22 3.22A9 9 0 0 1 16 7a9 9 0 0 1 9 9h4.5A13.5 13.5 0 0 0 16 2.5z"/>
-                <path fill="#4285F4" d="M16 29.5a13.5 13.5 0 0 0 9.55-3.95l-3.22-3.22A9 9 0 0 1 16 25a9 9 0 0 1-9-9H2.5A13.5 13.5 0 0 0 16 29.5z"/>
-                <path fill="#34A853" d="M2.5 16A13.5 13.5 0 0 0 16 29.5v-4.5A9 9 0 0 1 7 16H2.5z"/>
-              </svg>
-              <div class="recaptcha-brand-text">
-                <span class="recaptcha-brand-title">reCAPTCHA</span>
-                <div class="recaptcha-brand-links">
-                  <a href="https://www.google.com/intl/en/policies/privacy/" target="_blank" rel="noopener noreferrer">Privacy</a>
-                  <span>-</span>
-                  <a href="https://www.google.com/intl/en/policies/terms/" target="_blank" rel="noopener noreferrer">Terms</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <span class="form-error-text" id="errEnquiryRecaptcha" style="display: none;">Please check "I'm not a robot" to verify.</span>
-        </div>
-
-        <button type="submit" class="enquiry-submit-btn" id="enquirySubmitBtn">
-          <span>Submit Enquiry &amp; Get Quote</span>
-          <span>↗</span>
-        </button>
-      </form>
-    </div>
-  </div>
+  <!-- Unified Dynamic Layout Modals & Floating Root (Single Source of Truth in src/js/layout.js) -->
+  <div id="siteModalsRoot"></div>
 
   <!-- Application Bootstrap -->
   <script type="module" src="./src/js/app.js"></script>

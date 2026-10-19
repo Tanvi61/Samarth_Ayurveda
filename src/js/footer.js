@@ -132,8 +132,8 @@ export function renderFooter(containerEl) {
             </ul>
 
             <!-- Interactive Map Preview Embed & Button (Company Original Location: Katraj, Pune) -->
-            <div class="footer-map-action" style="display: flex; flex-direction: column; gap: 8px;">
-              <div class="footer-map-embed" style="width: 100%; max-width: 260px; height: 110px; border-radius: 8px; overflow: hidden; border: 1px solid rgba(4, 46, 9, 0.2); box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+            <div class="footer-map-action">
+              <div class="footer-map-embed">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15138.455088998818!2d73.8567!3d18.4529!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2ea946d49f05f%3A0xb31a96570d6eb773!2sKatraj%2C%20Pune%2C%20Maharashtra%20411046!5e0!3m2!1sen!2sin!4v1711200000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0; display:block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Samarth Ayurveda Katraj Pune Location"></iframe>
               </div>
               <a href="https://maps.google.com/?q=Katraj+Pune+Maharashtra+411046" target="_blank" rel="noopener noreferrer" class="footer-map-btn">
