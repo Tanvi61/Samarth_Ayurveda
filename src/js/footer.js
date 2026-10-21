@@ -1,10 +1,12 @@
 /**
- * Samarth Ayurveda - Modular Footer Component
- * Fulfills QA Checklist Item 4, 12, 16, 28:
- * - Logo, about, Quick Links, Contact Us, Map link
- * - Social Media Icons (opening in new tab)
- * - Review Us on Google + Link (Google Business Page)
- * - Company website + link, Year, Centered Copyright
+ * Samarth Ayurveda / Sonaherbal.com - Authentic Footer Component
+ * Matches original design from reference screenshot:
+ * - Newsletter section: "Subscribe for updates, tips & exclusive offer", pill email input with black circle button
+ * - Col 1: Main Menu (Home, Our Products, Contact, My Orders)
+ * - Col 2: Get Help (Contact Information, Legal Notice, Privacy Policy, Refund Policy, Shipping Policy, Terms of Service, Track Order)
+ * - Col 3: Follow Us on Instagram (3 Reels video cards with badges + @sonaliwaghmode8669)
+ * - Col 4: Our Location & Integrated Google Map (Map preview + View On Google Maps + Google review badge + Socials)
+ * - Bottom Bar: "© 2026 Sonaherbal.com, Powered by Shopify | Samarth Ayurveda" + Language Selector
  */
 
 export function renderFooter(containerEl) {
@@ -15,16 +17,15 @@ export function renderFooter(containerEl) {
   containerEl.innerHTML = `
     <footer class="site-footer" id="siteFooter">
       <div class="footer-container">
-        <!-- Top Newsletter Row -->
+        <!-- Top Newsletter Row (Exact match to screenshot) -->
         <div class="footer-newsletter-wrap">
           <div class="footer-newsletter-info">
-            <span class="footer-newsletter-eyebrow">Stay Connected With Nature</span>
-            <h2 class="footer-newsletter-title">Subscribe For Updates,<br />Haircare Tips &amp; Exclusive Offers</h2>
+            <h2 class="footer-newsletter-title">Subscribe for updates,<br />tips &amp; exclusive offer</h2>
           </div>
           <div class="footer-newsletter-form-wrap">
             <form class="footer-newsletter-form" id="footerNewsletterForm">
               <div class="footer-newsletter-pill">
-                <input class="footer-newsletter-input" id="footerEmailInput" type="email" placeholder="Enter your email address" required autocomplete="email" />
+                <input class="footer-newsletter-input" id="footerEmailInput" type="email" placeholder="Enter your email" required autocomplete="email" />
                 <button class="footer-newsletter-btn" type="submit" aria-label="Subscribe to newsletter">
                   <svg width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M7.5 4.5L13 10L7.5 15.5"/>
@@ -32,27 +33,114 @@ export function renderFooter(containerEl) {
                 </button>
               </div>
               <p class="footer-newsletter-disclaimer">
-                By subscribing, you agree to our <a href="#" data-policy="terms">Terms of Service</a> &amp; <a href="#" data-policy="privacy">Privacy Policy</a>.
+                By subscribing you agree to the <a href="terms.html">Terms of Use</a> &amp; <a href="privacy.html">Privacy Policy</a>.
               </p>
             </form>
           </div>
         </div>
 
-        <!-- Main Footer 4-Column Grid -->
+        <!-- Main Footer Columns Grid -->
         <div class="footer-main-grid">
-          <!-- Col 1: Brand & About -->
-          <div class="footer-col footer-col-about">
-            <div class="footer-brand-logo">
-              <a href="#home" data-route="home" class="footer-logo-link">
-                <span class="footer-logo-title">Ayurveda</span>
+          <!-- Col 1: Main Menu -->
+          <div class="footer-col footer-col-menu">
+            <h3 class="footer-col-title">Main Menu</h3>
+            <ul class="footer-links-list">
+              <li><a class="footer-link" href="index.html" data-route="home">Home</a></li>
+              <li><a class="footer-link" href="products.html" data-route="products">Our Products</a></li>
+              <li><a class="footer-link" href="contact.html" data-route="contact">Contact</a></li>
+              <li><a class="footer-link track-order-trigger" href="orders.html" data-route="orders">My Orders</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 2: Get Help -->
+          <div class="footer-col footer-col-help">
+            <h3 class="footer-col-title">Get Help</h3>
+            <ul class="footer-links-list">
+              <li><a class="footer-link" href="contact.html" data-route="contact" data-policy="contact">Contact Information</a></li>
+              <li><a class="footer-link" href="#" data-policy="legal">Legal Notice</a></li>
+              <li><a class="footer-link" href="privacy.html">Privacy Policy</a></li>
+              <li><a class="footer-link" href="#" data-policy="refund">Refund Policy</a></li>
+              <li><a class="footer-link" href="#" data-policy="shipping">Shipping Policy</a></li>
+              <li><a class="footer-link" href="terms.html">Terms of Service</a></li>
+              <li><a class="footer-link track-order-trigger" href="orders.html" data-route="orders">Track Order</a></li>
+              <li><a class="footer-link" href="tel:+919325260725">Call Us: +91 93252 60725</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 3: Follow Us on Instagram (3 Video Reels Cards + Handle) -->
+          <div class="footer-col footer-col-instagram">
+            <h3 class="footer-col-title">Follow Us on Instagram</h3>
+            <div class="footer-videos-grid">
+              <!-- Video 1: Sonali at desk (matches leftmost card in screenshot) -->
+              <div class="footer-video-card" data-video-index="0" data-video-src="https://sonaherbal.com/cdn/shop/videos/c/vp/ee67f6c7414d4a67b6b0e024f94b362e/ee67f6c7414d4a67b6b0e024f94b362e.HD-1080p-2.5Mbps-88431833.mp4?v=0">
+                <img src="/images/reel-thumb-3.png" onerror="this.onerror=null;this.src='https://sonaherbal.com/cdn/shop/files/Screenshot_2026-07-07_010758.png?v=1783366724&width=180';" alt="Sonali Waghmode Instagram Reel 1" class="footer-video-thumb" loading="lazy" />
+                <video class="footer-video-player" loop muted playsinline preload="none">
+                  <source src="https://sonaherbal.com/cdn/shop/videos/c/vp/ee67f6c7414d4a67b6b0e024f94b362e/ee67f6c7414d4a67b6b0e024f94b362e.HD-1080p-2.5Mbps-88431833.mp4?v=0" type="video/mp4" />
+                </video>
+                <div class="footer-video-badge" aria-hidden="true">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="3" width="20" height="18" rx="4" />
+                    <polygon points="10 8 16 12 10 16 10 8" fill="white" stroke="none" />
+                  </svg>
+                </div>
+              </div>
+
+              <!-- Video 2: Aloe vera processing (matches middle card in screenshot) -->
+              <div class="footer-video-card" data-video-index="1" data-video-src="https://sonaherbal.com/cdn/shop/videos/c/vp/1882b996a88f4d22acf136c07ad65fdb/1882b996a88f4d22acf136c07ad65fdb.HD-1080p-2.5Mbps-88431651.mp4?v=0">
+                <img src="/images/reel-thumb-1.png" onerror="this.onerror=null;this.src='https://sonaherbal.com/cdn/shop/files/Screenshot_2026-07-07_010814.png?v=1783366724&width=180';" alt="Sonali Waghmode Instagram Reel 2" class="footer-video-thumb" loading="lazy" />
+                <video class="footer-video-player" loop muted playsinline preload="none">
+                  <source src="https://sonaherbal.com/cdn/shop/videos/c/vp/1882b996a88f4d22acf136c07ad65fdb/1882b996a88f4d22acf136c07ad65fdb.HD-1080p-2.5Mbps-88431651.mp4?v=0" type="video/mp4" />
+                </video>
+                <div class="footer-video-badge" aria-hidden="true">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="3" width="20" height="18" rx="4" />
+                    <polygon points="10 8 16 12 10 16 10 8" fill="white" stroke="none" />
+                  </svg>
+                </div>
+              </div>
+
+              <!-- Video 3: Sona Herbal Bottle (matches rightmost card in screenshot) -->
+              <div class="footer-video-card" data-video-index="2" data-video-src="https://sonaherbal.com/cdn/shop/videos/c/vp/2a3ef42cc7304f108b8504ff78e606f1/2a3ef42cc7304f108b8504ff78e606f1.HD-1080p-2.5Mbps-88431650.mp4?v=0">
+                <img src="/images/reel-thumb-2.png" onerror="this.onerror=null;this.src='https://sonaherbal.com/cdn/shop/files/Screenshot_2026-07-07_010739.png?v=1783366724&width=180';" alt="Sonali Waghmode Instagram Reel 3" class="footer-video-thumb" loading="lazy" />
+                <video class="footer-video-player" loop muted playsinline preload="none">
+                  <source src="https://sonaherbal.com/cdn/shop/videos/c/vp/2a3ef42cc7304f108b8504ff78e606f1/2a3ef42cc7304f108b8504ff78e606f1.HD-1080p-2.5Mbps-88431650.mp4?v=0" type="video/mp4" />
+                </video>
+                <div class="footer-video-badge" aria-hidden="true">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="3" width="20" height="18" rx="4" />
+                    <polygon points="10 8 16 12 10 16 10 8" fill="white" stroke="none" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <!-- Instagram Handle -->
+            <div class="footer-ig-handle-wrap">
+              <a href="https://www.instagram.com/sonaliwaghmode8669/" target="_blank" rel="noopener noreferrer" class="footer-ig-handle">@sonaliwaghmode8669</a>
+            </div>
+          </div>
+
+          <!-- Col 4: Integrated Location & Map Embed -->
+          <div class="footer-col footer-col-map">
+            <h3 class="footer-col-title">Our Location</h3>
+            <p class="footer-map-address">📍 Katraj-Pune, Maharashtra 411046</p>
+            <div class="footer-map-action">
+              <div class="footer-map-embed">
+                <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=73.8400%2C18.4400%2C73.8800%2C18.4700&amp;layer=mapnik&amp;marker=18.4529%2C73.8567" width="100%" height="100%" style="border:0; display:block;" loading="eager" title="Katraj Pune Location Map"></iframe>
+              </div>
+              <a href="https://maps.google.com/?q=Katraj+Pune+Maharashtra+411046" target="_blank" rel="noopener noreferrer" class="footer-map-btn">
+                <span>View On Google Maps ↗</span>
+              </a>
+              <a href="tel:+919325260725" class="footer-map-btn footer-call-btn" aria-label="Call Samarth Ayurveda">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-2.2 2.2a15.053 15.053 0 01-6.59-6.59l2.2-2.21a.96.96 0 00.25-1.01A11.36 11.36 0 018.57 3.9c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.52c0-.55-.45-1-1-1z"/>
+                </svg>
+                <span>Call: +91 93252 60725</span>
               </a>
             </div>
-            <p class="footer-about-text">
-              Samarth Ayurveda brings 100% pure, natural, and handcrafted herbal haircare inspired by authentic Ayurvedic traditions. Formulated without harsh chemicals to nourish your hair naturally.
-            </p>
 
-            <!-- Google Review Badge & Link -->
-            <div class="footer-google-review-wrap">
+            <!-- Google Review Badge & Link (QA Check Item 4, 12, 16, 28) -->
+            <div class="footer-google-review-wrap" style="margin-top: 14px;">
               <a href="https://maps.google.com/?q=Samarth+Ayurveda" target="_blank" rel="noopener noreferrer" class="footer-google-review-btn">
                 <span class="google-icon-svg">
                   <svg width="18" height="18" viewBox="0 0 24 24">
@@ -70,7 +158,7 @@ export function renderFooter(containerEl) {
             </div>
 
             <!-- Social Media Icons (Open in New Tab) -->
-            <div class="footer-social-row">
+            <div class="footer-social-row" style="margin-top: 10px;">
               <a href="https://www.facebook.com/sonaherbal" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Facebook">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
               </a>
@@ -82,83 +170,55 @@ export function renderFooter(containerEl) {
               </a>
             </div>
           </div>
-
-          <!-- Col 2: Quick Links -->
-          <div class="footer-col footer-col-links">
-            <h3 class="footer-col-title">Quick Links</h3>
-            <ul class="footer-links-list">
-              <li><a class="footer-link" href="index.html" data-route="home">Home</a></li>
-              <li><a class="footer-link" href="about.html" data-route="about">About Us</a></li>
-              <li><a class="footer-link" href="products.html" data-route="products">Products</a></li>
-              <li><a class="footer-link" href="contact.html" data-route="contact">Contact Us</a></li>
-              <li><a class="footer-link track-order-trigger" href="orders.html" data-route="orders">Track Orders</a></li>
-              <li><a class="footer-link" href="index.html#account" data-route="account">My Account</a></li>
-            </ul>
-          </div>
-
-          <!-- Col 3: Products -->
-          <div class="footer-col footer-col-products">
-            <h3 class="footer-col-title">Our Products</h3>
-            <ul class="footer-links-list">
-              <li><a class="footer-link" href="products.html" data-route="products">Home Made Hair Oil</a></li>
-              <li><a class="footer-link" href="products.html" data-route="products">Herbal Shampoo</a></li>
-              <li><a class="footer-link" href="products.html" data-route="products">Homemade Mehndi Powder</a></li>
-              <li><a class="footer-link" href="products.html" data-route="products">Nourishment Conditioner</a></li>
-              <li><a class="footer-link" href="products.html" data-route="products">Rosemary Hair Growth Spray</a></li>
-              <li><a class="footer-link" href="products.html" data-route="products">Big Combo Pro Max</a></li>
-            </ul>
-          </div>
-
-          <!-- Col 4: Contact Us & Map -->
-          <div class="footer-col footer-col-contact">
-            <h3 class="footer-col-title">Contact Us</h3>
-            <ul class="footer-contact-info-list">
-              <li>
-                <span class="fci-icon">📍</span>
-                <span>Samarth Ayurveda, Katraj-Pune, Maharashtra 411046, India</span>
-              </li>
-              <li>
-                <span class="fci-icon">📞</span>
-                <a href="tel:+919325260725" class="footer-link">+91 93252 60725</a>
-              </li>
-              <li>
-                <span class="fci-icon">✉️</span>
-                <a href="mailto:info@samarthayurveda.com" class="footer-link">info@samarthayurveda.com</a>
-              </li>
-              <li>
-                <span class="fci-icon">🌐</span>
-                <a href="https://samarthayurveda.com" target="_blank" rel="noopener noreferrer" class="footer-link">www.samarthayurveda.com</a>
-              </li>
-            </ul>
-
-            <!-- Interactive Map Preview Embed & Button (Company Original Location: Katraj, Pune) -->
-            <div class="footer-map-action">
-              <div class="footer-map-embed">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15138.455088998818!2d73.8567!3d18.4529!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2ea946d49f05f%3A0xb31a96570d6eb773!2sKatraj%2C%20Pune%2C%20Maharashtra%20411046!5e0!3m2!1sen!2sin!4v1711200000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0; display:block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Samarth Ayurveda Katraj Pune Location"></iframe>
-              </div>
-              <a href="https://maps.google.com/?q=Katraj+Pune+Maharashtra+411046" target="_blank" rel="noopener noreferrer" class="footer-map-btn">
-                <span>View On Google Maps ↗</span>
-              </a>
-            </div>
-          </div>
         </div>
 
-        <!-- Center Copyright Bar (QA Item 16: Verify company name and copyright both center of footer) -->
-        <div class="footer-bottom-bar-centered">
-          <div class="footer-centered-copyright">
-            <p>© ${currentYear} <strong>Samarth Ayurveda</strong>. All Rights Reserved. | <a href="https://samarthayurveda.com" target="_blank" rel="noopener noreferrer" class="footer-site-link">www.samarthayurveda.com</a></p>
+        <!-- Bottom Copyright & Localization Bar (Matches screenshot layout) -->
+        <div class="footer-bottom-bar footer-bottom-bar-centered">
+          <div class="footer-copyright">
+            <p>© ${currentYear} <strong>Sonaherbal.com</strong>, Powered by Shopify | <strong>Samarth Ayurveda</strong>. All Rights Reserved.</p>
           </div>
-          <div class="footer-policy-row">
-            <a href="#" data-policy="terms">Terms of Service</a>
-            <span>•</span>
-            <a href="#" data-policy="privacy">Privacy Policy</a>
-            <span>•</span>
-            <a href="#" data-policy="refund">Refund Policy</a>
-            <span>•</span>
-            <a href="#" data-policy="shipping">Shipping Policy</a>
+          <div class="footer-localization-wrap">
+            <select class="footer-lang-select" aria-label="Language selector">
+              <option value="en">English (IN)</option>
+              <option value="mr">मराठी</option>
+              <option value="hi">हिन्दी</option>
+            </select>
           </div>
         </div>
       </div>
     </footer>
   `;
+
+  // Attach Video Hover and Click Listeners
+  const videoCards = containerEl.querySelectorAll('.footer-video-card');
+  videoCards.forEach(card => {
+    const video = card.querySelector('.footer-video-player');
+    card.addEventListener('mouseenter', () => {
+      if (video) {
+        video.play().catch(() => {});
+      }
+    });
+    card.addEventListener('mouseleave', () => {
+      if (video) {
+        video.pause();
+        video.currentTime = 0;
+      }
+    });
+    card.addEventListener('click', () => {
+      window.open('https://www.instagram.com/sonaliwaghmode8669/', '_blank', 'noopener,noreferrer');
+    });
+  });
+
+  // Newsletter form submission handling
+  const form = containerEl.querySelector('#footerNewsletterForm');
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const input = form.querySelector('#footerEmailInput');
+      if (input && input.value) {
+        alert('Thank you for subscribing to Sona Herbal & Samarth Ayurveda!');
+        input.value = '';
+      }
+    });
+  }
 }

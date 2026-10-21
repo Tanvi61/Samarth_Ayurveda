@@ -138,12 +138,12 @@
 }
 
 /* --------------------------------------------------------
-   2. LOWER 3 COLUMNS GRID
+   2. LOWER COLUMNS GRID (Main Menu, Get Help, Instagram Reels, Location Map)
 -------------------------------------------------------- */
 .footer-main-grid {
   display: grid;
-  grid-template-columns: 1.3fr 1fr 1fr 1.2fr;
-  gap: 40px;
+  grid-template-columns: minmax(130px, 1fr) minmax(170px, 1.2fr) minmax(360px, 2.5fr) minmax(220px, 1.4fr);
+  gap: 36px;
   margin-top: 50px;
   align-items: flex-start;
 }
@@ -151,6 +151,20 @@
 .footer-col {
   display: flex;
   flex-direction: column;
+}
+
+.footer-col-map {
+  display: flex;
+  flex-direction: column;
+  max-width: 250px;
+}
+
+.footer-map-address {
+  font-family: var(--font-family, 'Bricolage Grotesque', sans-serif);
+  font-size: 13.5px;
+  color: rgba(255, 255, 255, 0.88);
+  margin: 0 0 10px 0;
+  line-height: 1.45;
 }
 
 .footer-col-title {
@@ -326,20 +340,26 @@
 }
 
 .footer-google-review-wrap {
-  margin-bottom: 18px;
+  margin-top: 8px;
+  margin-bottom: 0;
+  width: 100%;
+  max-width: 220px;
 }
 
 .footer-google-review-btn {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.22);
-  padding: 10px 16px;
-  border-radius: 12px;
+  padding: 8px 12px;
+  border-radius: 8px;
   text-decoration: none;
   color: #ffffff;
   transition: all 0.25s ease;
+  width: 100%;
+  max-width: 220px;
+  box-sizing: border-box;
 }
 
 .footer-google-review-btn:hover {
@@ -441,11 +461,12 @@
 .footer-map-embed {
   width: 100%;
   max-width: 220px;
-  height: 105px;
+  height: 120px;
   border-radius: 8px;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  background: #e5e3df;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 .footer-map-btn {
@@ -474,17 +495,32 @@
   transform: translateY(-1px);
 }
 
-/* QA Item 16: Verify company name and copyright both center of footer */
+.footer-call-btn {
+  background: rgba(37, 211, 102, 0.16);
+  border-color: rgba(37, 211, 102, 0.35);
+  color: #ffffff;
+}
+
+.footer-call-btn:hover {
+  background: #25d366;
+  border-color: #25d366;
+  color: #05330a;
+}
+
+.footer-call-btn svg {
+  flex-shrink: 0;
+}
+
+/* QA Item 16 & Authentic Layout: Space-between Copyright on left and Localization on right */
 .footer-bottom-bar-centered {
   margin-top: 50px;
   padding-top: 24px;
   border-top: 1px solid rgba(255, 255, 255, 0.15);
-  text-align: center;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  gap: 12px;
+  flex-wrap: wrap;
+  gap: 16px;
 }
 
 .footer-centered-copyright p {
@@ -597,7 +633,7 @@
 /* --------------------------------------------------------
    5. RESPONSIVE MEDIA QUERIES
 -------------------------------------------------------- */
-@media (max-width: 960px) {
+@media (max-width: 1080px) {
   .footer-newsletter-wrap {
     flex-direction: column;
     gap: 20px;
@@ -618,6 +654,10 @@
   .footer-col-instagram {
     grid-column: span 2;
     max-width: 100%;
+  }
+
+  .footer-col-map {
+    grid-column: span 2;
   }
 
   .footer-videos-grid {
@@ -675,6 +715,11 @@
 
   .footer-col-instagram {
     grid-column: span 1;
+  }
+
+  .footer-col-map {
+    grid-column: span 1;
+    max-width: 100%;
   }
 
   .footer-videos-grid {

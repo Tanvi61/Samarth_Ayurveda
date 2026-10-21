@@ -46,6 +46,8 @@ function getInitialRoute() {
     if (pageAttr === 'contact') return 'contact';
     if (pageAttr === 'orders') return 'orders';
     if (pageAttr === 'account') return 'account';
+    if (pageAttr === 'terms') return 'terms';
+    if (pageAttr === 'privacy') return 'privacy';
   }
 
   if (path.includes('about.html') || path.endsWith('/about')) return 'about';
@@ -53,6 +55,8 @@ function getInitialRoute() {
   if (path.includes('contact.html') || path.endsWith('/contact')) return 'contact';
   if (path.includes('orders.html') || path.endsWith('/orders')) return 'orders';
   if (path.includes('account.html') || path.endsWith('/account')) return 'account';
+  if (path.includes('terms.html') || path.endsWith('/terms')) return 'terms';
+  if (path.includes('privacy.html') || path.endsWith('/privacy')) return 'privacy';
 
   return 'home';
 }
@@ -120,6 +124,10 @@ function handleRouteFromHash() {
     if (pageAttr === 'contact') { navigateTo('contact', null, false); return; }
     if (pageAttr === 'orders') { navigateTo('orders', null, false); return; }
     if (pageAttr === 'account') { navigateTo('account', null, false); return; }
+    if (pageAttr === 'terms' || pageAttr === 'privacy') {
+      updateNavActive(pageAttr);
+      return;
+    }
   }
 
   // 3. Pathname detection for standalone URLs
@@ -141,6 +149,14 @@ function handleRouteFromHash() {
   }
   if (path.includes('account.html') || path.endsWith('/account')) {
     navigateTo('account', null, false);
+    return;
+  }
+  if (path.includes('terms.html') || path.endsWith('/terms')) {
+    updateNavActive('terms');
+    return;
+  }
+  if (path.includes('privacy.html') || path.endsWith('/privacy')) {
+    updateNavActive('privacy');
     return;
   }
 
@@ -1310,8 +1326,11 @@ function renderContactView(mainEl) {
                 <span class="form-error-text" id="errContactRecaptcha" style="display: none;">Please check "I'm not a robot" to verify.</span>
               </div>
 
-              <button class="contact-submit-btn" type="submit" id="contactSubmitBtn">
-                <span>Send Message</span>
+              <button class="contact-submit-btn contact-whatsapp-btn" type="submit" id="contactSubmitBtn" aria-label="Connect on WhatsApp">
+                <svg class="contact-whatsapp-icon" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24M8.53 7.33c-.16 0-.35.06-.53.25-.19.19-.71.7-.71 1.71 0 1.01.73 1.98.84 2.12.1.14 1.45 2.22 3.52 3.11.49.21.88.34 1.18.44.5.16.95.14 1.31.08.4-.06 1.23-.5 1.4-.99.18-.49.18-.9.12-.99-.05-.09-.19-.15-.4-.25s-1.23-.61-1.42-.68c-.19-.07-.33-.1-.47.1-.14.21-.54.68-.66.82-.12.14-.24.16-.45.05-.21-.1-.89-.33-1.69-1.05-.62-.56-1.04-1.25-1.16-1.46-.12-.21-.01-.32.09-.43.09-.1.21-.26.32-.38.1-.13.14-.21.21-.36.07-.14.03-.27-.02-.38-.05-.1-.47-1.14-.65-1.56-.17-.41-.35-.35-.48-.36l-.41-.01z"/>
+                </svg>
+                <span>Connect on WhatsApp</span>
                 <span class="btn-arrow-circle">
                   <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
                     <polyline points="9 18 15 12 9 6"></polyline>
@@ -1649,23 +1668,46 @@ function renderContactView(mainEl) {
         'Structured Approval Summary': structuredApprovalText
       };
 
-      await dispatchApprovalEmail(payload);
+      // 1) Prepare formatted WhatsApp message
+      const waLines = [
+        '🌿 *SAMARTH AYURVEDA / SONA HERBAL - CUSTOMER INQUIRY*',
+        '------------------------------------------------------',
+        `👤 *Name:* ${fullName}`,
+        `📞 *Phone:* +91 ${phone}`,
+        `✉️ *Email:* ${email}`,
+        `📍 *Address:* ${address}`,
+        `📌 *Subject:* ${subject}`,
+        '------------------------------------------------------',
+        '💬 *Message:*',
+        `"${message}"`
+      ];
+      const waText = waLines.join('\n');
+      const waUrl = `https://wa.me/919325260725?text=${encodeURIComponent(waText)}`;
 
-      btn.innerHTML = '<span>Message Sent! ✓</span>';
-      btn.style.backgroundColor = '#0a9b61';
+      // 2) Dispatch background email relay
+      try {
+        dispatchApprovalEmail(payload);
+      } catch (err) {
+        console.warn('Background approval relay:', err);
+      }
+
+      btn.innerHTML = '<span>Redirecting to WhatsApp...</span>';
+      btn.style.backgroundColor = '#25D366';
       btn.style.opacity = '1';
-      btn.style.cursor = 'default';
 
+      // 3) Navigate directly to WhatsApp
       setTimeout(() => {
-        alert('Message sent successfully!');
-        contactForm.reset();
-        btn.disabled = false;
-        btn.innerHTML = originalHtml;
-        btn.style.backgroundColor = '';
-        btn.style.opacity = '';
-        btn.style.cursor = '';
-        renderContactView(mainEl);
-      }, 700);
+        window.open(waUrl, '_blank', 'noopener,noreferrer');
+        btn.innerHTML = '<span>Connected on WhatsApp ✓</span>';
+        setTimeout(() => {
+          contactForm.reset();
+          btn.disabled = false;
+          btn.innerHTML = originalHtml;
+          btn.style.backgroundColor = '';
+          btn.style.opacity = '';
+          btn.style.cursor = '';
+        }, 1200);
+      }, 500);
     });
   }
 }

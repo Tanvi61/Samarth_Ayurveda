@@ -180,6 +180,26 @@
   transform: translateY(-1px);
 }
 
+.contact-whatsapp-btn {
+  background-color: #25D366;
+  color: #ffffff;
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.35);
+  gap: 12px;
+}
+
+.contact-whatsapp-btn:hover {
+  background-color: #1ebe5d;
+  box-shadow: 0 6px 22px rgba(37, 211, 102, 0.5);
+  transform: translateY(-2px);
+}
+
+.contact-whatsapp-icon {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  fill: currentColor;
+}
+
 .btn-arrow-circle {
   width: 28px;
   height: 28px;

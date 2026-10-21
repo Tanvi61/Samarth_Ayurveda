@@ -144,3 +144,16 @@ a {
   opacity: 1;
   visibility: visible;
 }
+
+/* Universal protection: Ensure cart drawer and modals are ALWAYS hidden by default and never leak below footer */
+.cart-drawer:not(.is-open),
+#cartDrawer:not(.is-open),
+.search-modal:not(.is-open):not(.active),
+#enquiryModal:not(.is-open):not(.active),
+#searchModal:not(.is-open):not(.active),
+#orderTrackModal:not(.is-open):not(.active),
+#policyModal:not(.is-open):not(.active) {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}

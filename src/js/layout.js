@@ -221,7 +221,7 @@ export function getModalsAndFloatingHtml() {
     <div class="modal-backdrop" id="modalBackdrop"></div>
 
     <!-- Slide-Out Shopping Cart Drawer -->
-    <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping Cart">
+    <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping Cart" style="display: none;">
       <div class="cart-drawer-header">
         <div class="cart-drawer-title">
           <span>Shopping Cart</span>
@@ -267,7 +267,7 @@ export function getModalsAndFloatingHtml() {
     <!-- Floating Action Group (WhatsApp, Call, Scroll-to-Top) -->
     <div class="floating-action-group" id="floatingActionGroup" aria-label="Quick Actions">
       <a href="https://wa.me/919325260725?text=Hello%20Ayurveda" target="_blank" rel="noopener noreferrer" class="floating-action-btn floating-btn-whatsapp" aria-label="Chat on WhatsApp">
-        <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24M8.53 7.33c-.16 0-.35.06-.53.25-.19.19-.71.7-.71 1.71 0 1.01.73 1.98.84 2.12.1.14 1.45 2.22 3.52 3.11.49.21.88.34 1.18.44.5.16.95.14 1.31.08.4-.06 1.23-.5 1.4-.99.18-.49.18-.9.12-.99-.05-.09-.19-.15-.4-.25s-1.23-.61-1.42-.68c-.19-.07-.33-.1-.47.1-.14.21-.54.68-.66.82-.12.14-.24.16-.45.05-.21-.1-.89-.33-1.69-1.05-.62-.56-1.04-1.25-1.16-1.46-.12-.21-.01-.32.09-.43.09-.1.21-.26.32-.38.1-.13.14-.21.21-.36.07-.14.03-.27-.02-.38-.05-.1-.47-1.14-.65-1.56-.17-.41-.35-.35-.48-.36l-.41-.01z"/></svg>
         <span class="floating-action-tooltip">Chat on WhatsApp</span>
       </a>
 
@@ -283,7 +283,7 @@ export function getModalsAndFloatingHtml() {
     </div>
 
     <!-- Quick Enquiry & Get A Quote Modal -->
-    <div class="search-modal" id="enquiryModal">
+    <div class="search-modal" id="enquiryModal" style="display: none;">
       <div class="enquiry-modal-box">
         <div class="enquiry-modal-header">
           <div>
@@ -396,7 +396,7 @@ export function getModalsAndFloatingHtml() {
     </div>
 
     <!-- Instagram Reel Story Viewer Modal -->
-    <div class="reel-modal" id="reelModal">
+    <div class="reel-modal" id="reelModal" style="display: none;">
       <div class="reel-modal-box">
         <button class="reel-close-btn" id="reelCloseBtn">✕</button>
         <button class="reel-nav-btn reel-prev-btn" id="reelPrevBtn">‹</button>
@@ -412,7 +412,7 @@ export function getModalsAndFloatingHtml() {
     </div>
 
     <!-- Predictive Product Search Modal -->
-    <div class="search-modal" id="searchModal">
+    <div class="search-modal" id="searchModal" style="display: none;">
       <div class="search-box-container">
         <div class="search-input-wrap">
           <span class="search-icon-left">🔍</span>
@@ -426,7 +426,7 @@ export function getModalsAndFloatingHtml() {
     </div>
 
     <!-- Order Tracking Lookup Modal -->
-    <div class="search-modal" id="orderTrackModal">
+    <div class="search-modal" id="orderTrackModal" style="display: none;">
       <div class="search-box-container" style="max-width: 520px; width: 100%; border-radius: 20px; box-shadow: 0 25px 60px rgba(0,0,0,0.35);">
         <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; padding-bottom: 14px;">
           <div style="display: flex; align-items: center; gap: 10px;">
@@ -457,7 +457,7 @@ export function getModalsAndFloatingHtml() {
     </div>
 
     <!-- Store Policies Modal -->
-    <div class="search-modal" id="policyModal">
+    <div class="search-modal" id="policyModal" style="display: none;">
       <div class="search-box-container" style="max-width: 680px; max-height: 85vh; overflow-y: auto;">
         <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; padding-bottom: 14px;">
           <h3 id="policyModalTitle" style="font-size: 20px; font-weight: 800; color: #084e10;">Policy</h3>
@@ -478,8 +478,8 @@ export function getModalsAndFloatingHtml() {
           </svg>
         </button>
 
-        <button class="sona-chat-trigger-btn" id="sonaChatOpenBtn" aria-label="Open Ayurveda chat" type="button">
-          <span class="sona-chat-pill" id="sonaChatPill">Chat with Ayurveda</span>
+        <button class="sona-chat-trigger-btn" id="sonaChatOpenBtn" aria-label="Open Sona chat" type="button">
+          <span class="sona-chat-pill" id="sonaChatPill">Chat with Sona</span>
           <span class="sona-chat-avatar-wrap">
             <img class="sona-chat-avatar-img" src="/sona-chat-avatar.jpg" alt="Ayurveda support" onerror="this.src='https://cdn.shopify.com/s/files/1/0601/8242/9745/files/0Q7A2433.jpg_1_1.jpg?v=1783542548'" />
             <span class="sona-chat-online-dot"></span>
@@ -554,6 +554,48 @@ export function getModalsAndFloatingHtml() {
   `;
 }
 
+export function getPolicyFloatingHtml() {
+  return `
+    <!-- Floating Action Group (WhatsApp, Call, Scroll-to-Top) -->
+    <div class="floating-action-group" id="floatingActionGroup" aria-label="Quick Actions">
+      <a href="https://wa.me/919325260725?text=Hello%20Ayurveda" target="_blank" rel="noopener noreferrer" class="floating-action-btn floating-btn-whatsapp" aria-label="Chat on WhatsApp">
+        <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24M8.53 7.33c-.16 0-.35.06-.53.25-.19.19-.71.7-.71 1.71 0 1.01.73 1.98.84 2.12.1.14 1.45 2.22 3.52 3.11.49.21.88.34 1.18.44.5.16.95.14 1.31.08.4-.06 1.23-.5 1.4-.99.18-.49.18-.9.12-.99-.05-.09-.19-.15-.4-.25s-1.23-.61-1.42-.68c-.19-.07-.33-.1-.47.1-.14.21-.54.68-.66.82-.12.14-.24.16-.45.05-.21-.1-.89-.33-1.69-1.05-.62-.56-1.04-1.25-1.16-1.46-.12-.21-.01-.32.09-.43.09-.1.21-.26.32-.38.1-.13.14-.21.21-.36.07-.14.03-.27-.02-.38-.05-.1-.47-1.14-.65-1.56-.17-.41-.35-.35-.48-.36l-.41-.01z"/></svg>
+        <span class="floating-action-tooltip">Chat on WhatsApp</span>
+      </a>
+
+      <a href="tel:+919325260725" class="floating-action-btn floating-btn-call" aria-label="Call Samarth Ayurveda">
+        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span class="floating-action-tooltip">Click to Call</span>
+      </a>
+
+      <button type="button" class="floating-action-btn floating-btn-scrolltop" id="scrollTopBtn" aria-label="Scroll to Top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
+        <span class="floating-action-tooltip">Scroll to Top</span>
+      </button>
+    </div>
+
+    <!-- Floating "Chat with Sona" Widget -->
+    <div class="sona-floating-chat-container" id="sonaFloatingChat">
+      <div class="sona-chat-trigger-wrap" id="sonaChatTriggerWrap">
+        <button class="sona-chat-dismiss-btn" id="sonaChatDismissBtn" title="Dismiss" aria-label="Dismiss chat prompt" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 6 6 18"></path>
+            <path d="m6 6 12 12"></path>
+          </svg>
+        </button>
+
+        <button class="sona-chat-trigger-btn" id="sonaChatOpenBtn" aria-label="Open Sona chat" type="button">
+          <span class="sona-chat-pill" id="sonaChatPill">Chat with Sona</span>
+          <span class="sona-chat-avatar-wrap">
+            <img class="sona-chat-avatar-img" src="/sona-chat-avatar.jpg" alt="Sona support" onerror="this.src='https://cdn.shopify.com/s/files/1/0601/8242/9745/files/0Q7A2433.jpg_1_1.jpg?v=1783542548'" />
+            <span class="sona-chat-online-dot"></span>
+          </span>
+        </button>
+      </div>
+    </div>
+  `;
+}
+
 /**
  * Initializes and mounts all common layout components across pages.
  * Ensures the subheader, purple rotating line, navbar, modals, and footer
@@ -577,7 +619,9 @@ export function initCommonLayout(activeRoute = 'home') {
     modalsRoot.id = 'siteModalsRoot';
     document.body.appendChild(modalsRoot);
   }
-  if (!modalsRoot.hasChildNodes() || !document.getElementById('enquiryModal')) {
+  if (activeRoute === 'terms' || activeRoute === 'privacy') {
+    modalsRoot.innerHTML = getPolicyFloatingHtml();
+  } else if (!modalsRoot.hasChildNodes() || !document.getElementById('enquiryModal')) {
     modalsRoot.innerHTML = getModalsAndFloatingHtml();
   }
 
